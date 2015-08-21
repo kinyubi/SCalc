@@ -1,0 +1,53 @@
+﻿@model Suncrest.ShippingCalculator.Models.CalculationResults
+
+@{
+    ViewBag.Title = "Shipping Cost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (@Model.ErrorMessage == "")
+{
+    <div class="container">
+        <div class="jumbotron">
+            <div class="panel panel-success">
+                <div class="panel-heading text-center">
+                    <h1>@Html.DisplayFor(model => model.Cost)</h1>
+                </div>
+                <div class="panel-body table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="th-shaded">
+                            <tr>
+                                <th class="th-shaded">ZipCode</th>
+                                <th class="th-shaded">Zone</th>
+                                <th class="th-shaded">Weight</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@Model.Zip</td>
+                                <td>@Model.Zone</td>
+                                <td>@Html.DisplayFor(model => model.Weight) lbs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+else {
+<div class="jumbotron">
+    <div class="panel panel-danger">
+        <div class="panel-heading"><h4>ERROR</h4></div>
+        <div class="panel-body">
+            <p>@Model.ErrorMessage</p>
+        </div>
+    </div>
+</div>
+}
+<button type="button" class="btn btn-default">
+    @Html.ActionLink("New Calculation", "Index")
+</button>
+   
+
