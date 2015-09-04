@@ -133,16 +133,24 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CalculationInputs.cs" />
     <Compile Include="Models\CalculationResults.cs" />
+    <Compile Include="Models\FakeShippingCostServiceClient.cs" />
+    <Compile Include="Models\FakeShippingZonesServiceClient.cs" />
+    <Compile Include="Models\IShippingCostsServiceClient.cs" />
+    <Compile Include="Models\IShippingZonesServiceClient.cs" />
+    <Compile Include="Models\ServiceFactory.cs" />
     <Compile Include="Models\ShippingCalculation.cs" />
     <Compile Include="Models\ShippingCost.cs" />
+    <Compile Include="Models\ShippingCosts.cs" />
     <Compile Include="Models\ShippingCostsServiceClient.cs" />
     <Compile Include="Models\ShippingZone.cs" />
+    <Compile Include="Models\ShippingZones.cs" />
     <Compile Include="Models\ShippingZonesServiceClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -161,6 +169,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -184,9 +194,13 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\_CalculationLookup.cshtml" />
-    <Content Include="Views\Home\_CalculationResult.cshtml" />
+    <Content Include="Views\Ajax\_CalculationLookup.cshtml" />
+    <Content Include="Views\Ajax\_CalculationResult.cshtml" />
     <Content Include="Views\Home\Calculation.cshtml" />
+    <Content Include="Views\Ajax\Index.cshtml" />
+    <Content Include="Views\Shared\_CostsTable.cshtml" />
+    <Content Include="Views\Shared\_ZonesTable.cshtml" />
+    <Content Include="Views\Ajax\_Empty.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -197,6 +211,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

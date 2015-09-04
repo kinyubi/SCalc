@@ -6,8 +6,7 @@ namespace Suncrest.ShippingCalculator.Models
     {
         [Required(ErrorMessage = "The ZipCode cannot be blank")]
         [Display(Name = "ZipCode:")]
-        [StringLength(5, MinimumLength = 5, ErrorMessage = "ZipCode must be 5 digits")]
-        [RegularExpression(@"^\d{5}$", ErrorMessage = "ZipCode must be 5 digits")]
+        [RegularExpression(@"^\d{5}$", ErrorMessage = "ZipCode must be a 5-digit number. (You're not in Canada, eh!)")]
         public string ZipCode { get; set; }
 
         [Required(ErrorMessage = "Weight cannot be blank")]

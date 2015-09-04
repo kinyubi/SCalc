@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using System.Configuration;
 
 namespace Suncrest.ShippingCalculator.Models
 {
@@ -12,18 +13,13 @@ namespace Suncrest.ShippingCalculator.Models
         public CalculationInputs Inputs {get; set; }
         public CalculationResults Results { get; set; }
 
-        public ShippingCalculation()
-        {
-            Results = new CalculationResults();
-            Inputs = new CalculationInputs();
-            
-        }
+        public ShippingCalculation() : this(null, 0m) {}
 
         public ShippingCalculation(string zip, decimal weight) 
         {
             Results = new CalculationResults
                 {
-                    Zip = zip,
+                    ZipCode = zip,
                     Weight = weight
                 };
             Inputs = new CalculationInputs(zip, weight);
@@ -33,7 +29,7 @@ namespace Suncrest.ShippingCalculator.Models
         public void Compute(string zip, decimal weight)
         {
             Inputs = new CalculationInputs(zip,weight);
-            Results.Zip = zip;
+            Results.ZipCode = zip;
             Results.Weight = weight;
             DoCompute();
         }
@@ -63,7 +59,8 @@ namespace Suncrest.ShippingCalculator.Models
                     throw new ArgumentOutOfRangeException("zip", Inputs.ZipCode, "Zip code must be 5 digits");
                 }
                 //determine the zone for the specified zone by calling the service
-                _zipZone = ShippingZonesServiceClient.GetOne(Inputs.ZipCode);
+                IShippingZonesServiceClient _serviceClient = ServiceFactory.GetZonesClient();
+                _zipZone = _serviceClient.GetOne(Inputs.ZipCode);
                 if (_zipZone == null)
                 {
                     Results.Status = StatusType.ZoneUnknownForSpecifiedZipCode;
@@ -77,8 +74,10 @@ namespace Suncrest.ShippingCalculator.Models
                     Results.ErrorMessage = String.Format("{0} is not a valid weight. The weight must be a positive number less than 100.", Inputs.Weight);
                     throw new ArgumentOutOfRangeException("weight", Inputs.Weight, "Weight must be greater than 0 and less than 100 lbs");
                 }
-                
-                _costTier = ShippingCostsServiceClient.GetOne(Results.Zone, Inputs.Weight);
+
+                IShippingCostsServiceClient _shippingCostServiceClient = ServiceFactory.GetCostsClient();
+                _costTier = _shippingCostServiceClient.GetOne(Results.Zone, Inputs.Weight);
+
                 if (_costTier == null)
                 {
                     Results.Status = StatusType.CostUnknownForZipCodeAndWeight;

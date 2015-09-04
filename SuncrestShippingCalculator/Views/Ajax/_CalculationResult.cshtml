@@ -1,0 +1,48 @@
+﻿@model Suncrest.ShippingCalculator.Models.CalculationResults
+
+@if (@Model.ErrorMessage == "")
+{
+    <br/>
+    <div class="row"></div>
+    <h3>Shipping Cost</h3>
+    <div class="btn-lg btn-success">@Html.DisplayFor(model => model.Cost)</div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="th-shaded">
+                <tr>
+                    <th class="th-shaded col-sm-3">ZipCode</th>
+                    <th class="th-shaded col-sm-3">Zone</th>
+                    <th class="th-shaded col-sm-3">Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.ZipCode</td>
+                    <td>@Model.Zone</td>
+                    <td>@Html.DisplayFor(model => model.Weight) lbs</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+}
+else
+{
+    <div class="jumbotron">
+        <div class="panel panel-danger">
+            <div class="panel-heading"><h4>ERROR</h4></div>
+            <div class="panel-body">
+                <p>@Model.ErrorMessage</p>
+            </div>
+        </div>
+    </div>
+}
+<br/>
+<div class="row">
+    <button type="button" class="btn btn-default">
+        @Html.ActionLink("New Calculation", "Index")
+    </button>
+</div>
+

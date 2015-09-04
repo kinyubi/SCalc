@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Suncrest.ShippingCalculator.Models.ShippingCost>
+
+
+<table class="table">
+    <tr>
+        <th class="th-shaded">
+            @Html.DisplayNameFor(model => model.Zone)
+        </th>
+        <th class="th-shaded">
+            @Html.DisplayNameFor(model => model.MinWeight)
+        </th>
+        <th class="th-shaded">
+            @Html.DisplayNameFor(model => model.MaxWeight)
+        </th>
+        <th class="th-shaded">
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinWeight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxWeight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+ @if (Request.IsAjaxRequest())
+{
+    @Ajax.ActionLink("Hide Rate Chart", "Clear", ajaxOptions: new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "updateDiv" })
+}
+</p>

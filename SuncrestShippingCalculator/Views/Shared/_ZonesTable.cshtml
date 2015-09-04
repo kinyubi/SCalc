@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Suncrest.ShippingCalculator.Models.ShippingZone>
+
+
+<table class="table">
+    <tr>
+        <th class="th-shaded">
+            @Html.DisplayNameFor(model => model.Zip)
+        </th>
+        <th class="th-shaded">
+            @Html.DisplayNameFor(model => model.Zone)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zone)
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+    @if (Request.IsAjaxRequest())
+    {
+        @Ajax.ActionLink("Hide Zones Chart", "Clear", ajaxOptions: new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "updateDiv" })
+    }
+</p>

@@ -101,9 +101,9 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
-    <Compile Include="ShippingZonesServiceClientTests.cs" />
-    <Compile Include="ShippingCostsServiceClientTests.cs" />
-    <Compile Include="ShippingCalculationTests.cs" />
+    <Compile Include="Models\IShippingZonesServiceClientTests.cs" />
+    <Compile Include="Models\IShippingCostsServiceClientTests.cs" />
+    <Compile Include="Models\ShippingCalculationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />

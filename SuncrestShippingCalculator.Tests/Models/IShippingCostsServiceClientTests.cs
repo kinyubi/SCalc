@@ -5,13 +5,25 @@ using System.Linq;
 
 namespace Suncrest.ShippingCalculator.Tests
 {
+
     [TestClass]
-    public class ShippingCostsServiceClientTests
+    public abstract class BaseShippingCostsServiceClientTests
     {
+        private IShippingCostsServiceClient _serviceClient;
+
+        //Use the constructor to set _serviceClient to the implementation
+        internal abstract IShippingCostsServiceClient GetServiceClient();
+
+        [TestInitialize]
+        public void ClassInitialize()
+        {
+            _serviceClient = GetServiceClient();
+        }
+
         [TestMethod]
         public void ShippingCosts_GetAll_Should_Succeed()
         {
-            IEnumerable<ShippingCost> rates = ShippingCostsServiceClient.GetAll();
+            IEnumerable<ShippingCost> rates = _serviceClient.GetAll();
             Assert.IsNotNull(rates);
             ShippingCost rate = rates.FirstOrDefault(r => r.Zone == "4" && r.MaxWeight == 2m);
             Assert.IsTrue(rate.Cost == 3.25m);
@@ -21,7 +33,7 @@ namespace Suncrest.ShippingCalculator.Tests
         [TestMethod]
         public void ShippingCosts_GetOne_When_WeightAtHighLimit()
         {
-            ShippingCost rate = ShippingCostsServiceClient.GetOne("4", 1.50m);
+            ShippingCost rate = _serviceClient.GetOne("4", 1.50m);
             Assert.IsNotNull(rate);
             Assert.IsTrue(rate.Cost == 2m);
         }
@@ -29,14 +41,14 @@ namespace Suncrest.ShippingCalculator.Tests
         [TestMethod]
         public void ShippingCosts_GetOne_When_WeightJustOverHighLimit()
         {
-            ShippingCost rate = ShippingCostsServiceClient.GetOne("4", 2.001m);
+            ShippingCost rate = _serviceClient.GetOne("4", 2.001m);
             Assert.IsNull(rate);
         }
 
         [TestMethod]
         public void ShippingCosts_GetOne_When_WeightAtLowLimit()
         {
-            ShippingCost rate = ShippingCostsServiceClient.GetOne("3", 1.00001m);
+            ShippingCost rate = _serviceClient.GetOne("3", 1.00001m);
             Assert.IsNotNull(rate);
             Assert.IsTrue(rate.Cost == 2.25m);
         }
@@ -44,22 +56,40 @@ namespace Suncrest.ShippingCalculator.Tests
         [TestMethod]
         public void ShippingCosts_GetOne_When_WeightZero_ShouldBe_Null()
         {
-            ShippingCost rate = ShippingCostsServiceClient.GetOne("4", 0m);
+            ShippingCost rate = _serviceClient.GetOne("4", 0m);
             Assert.IsNull(rate);
         }
 
         [TestMethod]
         public void ShippingCosts_GetOne_When_ZoneValidAndWeightOutOfRange()
         {
-            ShippingCost rate = ShippingCostsServiceClient.GetOne("4", 5m);
+            ShippingCost rate = _serviceClient.GetOne("4", 5m);
             Assert.IsNull(rate);
         }
 
         [TestMethod]
         public void ShippingCosts_GetOne_When_ZoneInvalid()
         {
-            ShippingCost rate = ShippingCostsServiceClient.GetOne("AAAA", 1.5m);
+            ShippingCost rate = _serviceClient.GetOne("AAAA", 1.5m);
             Assert.IsNull(rate);
+        }
+    }
+
+    [TestClass]
+    public class ShippingCostsServiceClientTests : BaseShippingCostsServiceClientTests
+    {
+        internal override IShippingCostsServiceClient GetServiceClient()
+        {
+            return ShippingCostsServiceClient.Instance;
+        }
+    }
+
+    [TestClass]
+    public class FakeShippingCostsServiceClientTests : BaseShippingCostsServiceClientTests
+    {
+        internal override IShippingCostsServiceClient GetServiceClient()
+        {
+            return FakeShippingCostServiceClient.Instance;
         }
     }
 }

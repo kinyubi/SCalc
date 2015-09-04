@@ -13,5 +13,19 @@ namespace Suncrest.ShippingCalculator.Models
         [Display(Name = "Cost:")]
         [DataType(DataType.Currency)]
         public decimal Cost { get; set; }
+
+        public ShippingCost(string zone, decimal minWeight, decimal maxWeight, decimal cost)
+        {
+            Zone = zone;
+            MinWeight = minWeight;
+            MaxWeight = maxWeight;
+            Cost = cost;
+        }
+
+        public ShippingCost() : this(null, 0m, 0m, 0m) { }
+
+        
     }
+
+    
 }

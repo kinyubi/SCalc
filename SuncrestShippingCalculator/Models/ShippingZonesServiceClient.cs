@@ -1,18 +1,22 @@
 ﻿using RestSharp;
 using System.Collections.Generic;
 using System.Net;
-using System.Web.Configuration;
+using System.Configuration;
+using System;
 
 namespace Suncrest.ShippingCalculator.Models
 {
-    public class ShippingZonesServiceClient 
+    public class ShippingZonesServiceClient : IShippingZonesServiceClient
     {
-        static string _shippingServiceUri;
-        static IRestClient _client;
+        private static readonly Lazy<ShippingZonesServiceClient> lazy = new Lazy<ShippingZonesServiceClient>(() => new ShippingZonesServiceClient());
+        public static ShippingZonesServiceClient Instance { get { return lazy.Value; } }
 
-        static ShippingZonesServiceClient()
+        private string _shippingServiceUri;
+        private IRestClient _client;
+
+        private ShippingZonesServiceClient()
         {
-            _shippingServiceUri = WebConfigurationManager.AppSettings["ShippingServiceUri"];
+            _shippingServiceUri = ConfigurationManager.AppSettings["ShippingServiceUri"];
             if (_shippingServiceUri == null)
             {
                 throw new KeyNotFoundException("ShippingServiceUri key not found in AppSettings");
@@ -20,7 +24,7 @@ namespace Suncrest.ShippingCalculator.Models
             _client = new RestClient(_shippingServiceUri);
         }
 
-        public static ShippingZone GetOne(string zip)
+        public ShippingZone GetOne(string zip)
         {
             var request = new RestRequest("Zones/{zip}", Method.GET) { RequestFormat = DataFormat.Json };
             request.AddParameter("zip", zip, ParameterType.UrlSegment);
@@ -36,7 +40,7 @@ namespace Suncrest.ShippingCalculator.Models
             return response.Data;
         }
 
-        public static IEnumerable<ShippingZone> GetAll()
+        public IEnumerable<ShippingZone> GetAll()
         {
             var request = new RestRequest("Zones", Method.GET) { RequestFormat = DataFormat.Json };
             var response = _client.Execute<List<ShippingZone>>(request);

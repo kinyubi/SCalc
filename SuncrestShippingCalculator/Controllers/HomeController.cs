@@ -1,4 +1,5 @@
 ﻿using Suncrest.ShippingCalculator.Models;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace Suncrest.ShippingCalculator.Controllers
@@ -15,15 +16,37 @@ namespace Suncrest.ShippingCalculator.Controllers
             return View();
         }
 
-        public ActionResult LookupCost(string zipCode, decimal weight)
+        public ActionResult Calculation(string zipCode, decimal weight)
         {
             var result = new ShippingCalculation(zipCode, weight);
             var model = result.Results;
-            if (Request.IsAjaxRequest())
-            {
-                return PartialView("_CalculationResult", model);
-            }
             return View("Calculation", model);
+        }
+
+        public ActionResult CostsTable()
+        {
+            IShippingCostsServiceClient costClient = ServiceFactory.GetCostsClient();
+            var model = costClient.GetAll();
+            return PartialView("_CostsTable", model);
+        }
+
+        public ActionResult ZonesTable()
+        {
+            IShippingZonesServiceClient zonesClient = ServiceFactory.GetZonesClient();
+            var model = zonesClient.GetAll();
+            return PartialView("_ZonesTable", model);
+        }
+
+        public ActionResult ClearZonesTable()
+        {
+            var model = new List<ShippingZone>();
+            return PartialView("_ZonesTable", model);
+        }
+
+        public ActionResult ClearCostsTable()
+        {
+            var model = new List<ShippingCost>();
+            return PartialView("_CostsTable", model);
         }
 
         public ActionResult About()
