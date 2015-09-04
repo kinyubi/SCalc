@@ -147,10 +147,8 @@
     <Compile Include="Models\ServiceFactory.cs" />
     <Compile Include="Models\ShippingCalculation.cs" />
     <Compile Include="Models\ShippingCost.cs" />
-    <Compile Include="Models\ShippingCosts.cs" />
     <Compile Include="Models\ShippingCostsServiceClient.cs" />
     <Compile Include="Models\ShippingZone.cs" />
-    <Compile Include="Models\ShippingZones.cs" />
     <Compile Include="Models\ShippingZonesServiceClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
