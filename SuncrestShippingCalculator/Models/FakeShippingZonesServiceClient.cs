@@ -65,5 +65,7 @@ namespace Suncrest.ShippingCalculator.Models
         {
             return _zones;
         }
+
+        public string ServiceUri { get { return "fake"; } }
     }
 }

@@ -70,5 +70,7 @@ namespace Suncrest.ShippingCalculator.Models
         {
             return _rates;
         }
+
+        public string ServiceUri { get { return "fake"; } }
     }
 }

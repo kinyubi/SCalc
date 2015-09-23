@@ -20,5 +20,7 @@ namespace Suncrest.ShippingCalculator.Models
         /// </summary>
         /// <returns>The entire table of ShippingCost objects</returns>
         IEnumerable<ShippingCost> GetAll();
+
+        string ServiceUri { get; }
     }
 }

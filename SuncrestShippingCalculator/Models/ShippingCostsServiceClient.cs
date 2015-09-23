@@ -38,11 +38,11 @@ namespace Suncrest.ShippingCalculator.Models
         private ShippingCostsServiceClient()
         {
             _shippingServiceUri = ConfigurationManager.AppSettings["ShippingServiceUri"];
-            if (_shippingServiceUri == null)
+            if (ServiceUri == null)
             {
                 throw new KeyNotFoundException("ShippingServiceUri key not found in AppSettings");
             }
-            _client = new RestClient(_shippingServiceUri);
+            _client = new RestClient(ServiceUri);
         }
 
         /// <summary>
@@ -88,5 +88,7 @@ namespace Suncrest.ShippingCalculator.Models
             }
             return response.Data;
         }
+
+        public string ServiceUri { get { return _shippingServiceUri; } }
     }
 }

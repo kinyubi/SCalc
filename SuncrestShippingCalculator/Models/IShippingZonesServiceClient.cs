@@ -23,5 +23,7 @@ namespace Suncrest.ShippingCalculator.Models
         /// </summary>
         /// <returns>an entire array of ShippingZone objects</returns>
         IEnumerable<ShippingZone> GetAll();
+
+        string ServiceUri { get; }
     }
 }
