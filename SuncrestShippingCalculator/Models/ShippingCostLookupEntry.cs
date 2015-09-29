@@ -8,7 +8,7 @@ namespace Suncrest.ShippingCalculator.Models
     /// The lookup algorithm matches is the given weight is greater than the MinWeight and
     /// less than or equal to the MaxWeight.
     /// </summary>
-    public class ShippingCost
+    public class ShippingCostLookupEntry : IShippingCostLookupEntry
     {
         /// <summary>
         /// Gets or sets the zone for this table entry.
@@ -36,13 +36,13 @@ namespace Suncrest.ShippingCalculator.Models
         public decimal Cost { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ShippingCost"/> class.
+        /// Initializes a new instance of the <see cref="ShippingCostLookupEntry"/> class.
         /// </summary>
         /// <param name="zone">The zone.</param>
         /// <param name="minWeight">The minimum weight. Given weight must be greater than</param>
         /// <param name="maxWeight">The maximum weight. Given weight must be less than or equal</param>
         /// <param name="cost">The cost associated with a zone and weight range.</param>
-        public ShippingCost(string zone, decimal minWeight, decimal maxWeight, decimal cost)
+        public ShippingCostLookupEntry(string zone, decimal minWeight, decimal maxWeight, decimal cost)
         {
             Zone = zone;
             MinWeight = minWeight;
@@ -51,9 +51,9 @@ namespace Suncrest.ShippingCalculator.Models
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ShippingCost"/> class.
+        /// Initializes a new instance of the <see cref="ShippingCostLookupEntry"/> class.
         /// </summary>
-        public ShippingCost() : this(null, 0m, 0m, 0m) { }
+        public ShippingCostLookupEntry() : this(null, 0m, 0m, 0m) { }
 
         
     }

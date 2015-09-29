@@ -7,7 +7,7 @@ namespace Suncrest.ShippingCalculator.Models
     /// <summary>
     /// Represents the inputs provided by the user for the calculation
     /// </summary>
-    public class CalculationInputs
+    public class CalculationInputs : ICalculationInputs
     {
         /// <summary>
         /// Gets or sets the zip code input by the user.

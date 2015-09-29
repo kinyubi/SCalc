@@ -1,11 +1,25 @@
 ﻿using Suncrest.ShippingCalculator.Models;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using System;
 
 namespace Suncrest.ShippingCalculator.Controllers
 {
     public class HomeController : Controller
     {
+        private IShippingCostsLookup _shippingCostsLookup;
+        private IShippingZonesLookup _shippingZonesLookup;
+        private IConfigurationWrapper _configuration;
+        private Calculator _calculator;
+
+        public HomeController(IShippingCostsLookup shippingCostsLookup, IShippingZonesLookup shippingZonesLookup, IConfigurationWrapper configuration)
+        {
+            _shippingCostsLookup = shippingCostsLookup;
+            _shippingZonesLookup = shippingZonesLookup;
+            _configuration = configuration;
+            _calculator = new Calculator(_shippingZonesLookup, _shippingCostsLookup);
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -18,34 +32,32 @@ namespace Suncrest.ShippingCalculator.Controllers
 
         public ActionResult Calculation(string zipCode, decimal weight)
         {
-            var result = new ShippingCalculation(zipCode, weight);
-            var model = result.Results;
-            return View("Calculation", model);
+            ICalculationResults results = _calculator.Compute(zipCode, weight);
+            var view = View("Calculation", results);
+            return view;
         }
 
         public ActionResult CostsTable()
         {
-            IShippingCostsServiceClient costClient = ServiceFactory.GetCostsClient();
-            var model = costClient.GetAll();
+            var model = _shippingCostsLookup.GetAll();
             return PartialView("_CostsTable", model);
         }
 
         public ActionResult ZonesTable()
         {
-            IShippingZonesServiceClient zonesClient = ServiceFactory.GetZonesClient();
-            var model = zonesClient.GetAll();
+            var model = _shippingZonesLookup.GetAll();
             return PartialView("_ZonesTable", model);
         }
 
         public ActionResult ClearZonesTable()
         {
-            var model = new List<ShippingZone>();
+            var model = new List<IShippingZoneLookupEntry>();
             return PartialView("_ZonesTable", model);
         }
 
         public ActionResult ClearCostsTable()
         {
-            var model = new List<ShippingCost>();
+            var model = new List<IShippingCostLookupEntry>();
             return PartialView("_CostsTable", model);
         }
 

@@ -4,7 +4,7 @@ namespace Suncrest.ShippingCalculator.Models
     /// <summary>
     /// Represents an entry in the table that associates zip codes with shipping zones
     /// </summary>
-    public class ShippingZone
+    public class ShippingZoneLookupEntry : IShippingZoneLookupEntry
     {
         /// <summary>
         /// Gets or sets the zip code. Many-to-one relationship with Zone. Each zipcode in the table
@@ -18,19 +18,19 @@ namespace Suncrest.ShippingCalculator.Models
         public string Zone { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ShippingZone"/> class.
+        /// Initializes a new instance of the <see cref="ShippingZoneLookupEntry"/> class.
         /// </summary>
         /// <param name="zip">The zipcode.</param>
         /// <param name="zone">The zone to associate with the zipcode.</param>
-        public ShippingZone(string zip, string zone)
+        public ShippingZoneLookupEntry(string zip, string zone)
         {
             Zip = zip;
             Zone = zone;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ShippingZone"/> class.
+        /// Initializes a new instance of the <see cref="ShippingZoneLookupEntry"/> class.
         /// </summary>
-        public ShippingZone() : this(null, null) { }
+        public ShippingZoneLookupEntry() : this(null, null) { }
     }
 }

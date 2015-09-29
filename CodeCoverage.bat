@@ -9,7 +9,8 @@ SET RESULTSFILE=%SOLDIR%\SuncrestShippingCalculator.trx
 SET TARGETARGS=/testcontainer:%TESTDLL% /resultsfile:%RESULTSFILE%
 SET OUTXML=C:\temp\coverage.xml
 SET OUTHTMLDIR=C:\Temp\ShippingCalculatorCoverage
-SET FILTER=+[SuncrestShippingCalculator]* -[SuncrestShippingCalculator.Tests]*
+SET NS=
+SET FILTER=+[SuncrestShippingCalculator]* -[SuncrestShippingCalculator.Tests]* -[*]*Config -[*]*MvcApplication
 
 IF NOT EXIST %OUTHTMLDIR% mkdir %OUTHTMLDIR%
 

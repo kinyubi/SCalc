@@ -1,30 +1,15 @@
 ﻿using RestSharp;
 using System.Collections.Generic;
 using System.Net;
-using System.Configuration;
 using System;
 
 namespace Suncrest.ShippingCalculator.Models
 {
     /// <summary>
-    /// Singleton representing a concrete implementation of IShippingCostsServiceClient.
+    /// Default implementation of IShippingCostsServiceClient.
     /// </summary>
-    public sealed class ShippingCostsServiceClient : IShippingCostsServiceClient
+    public class DefaultShippingCostLookup : IShippingCostsLookup
     {
-        /// <summary>
-        /// Part of the singleton pattern implementation
-        /// </summary>
-        private static readonly Lazy<ShippingCostsServiceClient> lazy = new Lazy<ShippingCostsServiceClient>(() => new ShippingCostsServiceClient());
-
-        /// <summary>
-        /// Gets the ShippingCostsServiceClient instance.
-        /// </summary>
-        public static ShippingCostsServiceClient Instance {get {return lazy.Value;}}
-
-        /// <summary>
-        /// The ShippingServiceUri appsetting found in the Web.Config file.
-        /// </summary>
-        private string _shippingServiceUri;
 
         /// <summary>
         /// Implementation of a RestSharp library RESTful service client
@@ -32,17 +17,25 @@ namespace Suncrest.ShippingCalculator.Models
         private IRestClient _client;
 
         /// <summary>
-        /// Prevents a default instance of the <see cref="ShippingCostsServiceClient"/> class from being created.
+        /// The ShippingServiceUri appsetting found in the Web.Config file.
         /// </summary>
-        /// <exception cref="System.Collections.Generic.KeyNotFoundException">ShippingServiceUri key not found in AppSettings</exception>
-        private ShippingCostsServiceClient()
+        public string ServiceUri { get; private set; }
+
+        /// <summary>
+        /// Create an instance of the <see cref="DefaultShippingCostLookup"/> class.
+        /// </summary>
+        public DefaultShippingCostLookup(IConfigurationWrapper configSettings)
         {
-            _shippingServiceUri = ConfigurationManager.AppSettings["ShippingServiceUri"];
-            if (ServiceUri == null)
+            if (!configSettings.HasKey("ShippingServiceUri"))
             {
-                throw new KeyNotFoundException("ShippingServiceUri key not found in AppSettings");
+                throw new KeyNotFoundException("ShippingServiceUri key not found in configuration");
             }
+            ServiceUri = configSettings.GetValue("ShippingServiceUri");
             _client = new RestClient(ServiceUri);
+        }
+
+        public DefaultShippingCostLookup() : this(DefaultConfigurationWrapper.Instance)
+        {
         }
 
         /// <summary>
@@ -54,12 +47,12 @@ namespace Suncrest.ShippingCalculator.Models
         /// The associated ShippingCost object or null if not found
         /// </returns>
         /// <exception cref="System.Net.WebException">Unexpected response from ShippingCostsService</exception>
-        public ShippingCost GetOne(string zone, decimal weight)
+        public IShippingCostLookupEntry GetOne(string zone, decimal weight)
         {
             var request = new RestRequest("Costs/{zone}/{weight}/", Method.GET) { RequestFormat = DataFormat.Json };
             request.AddParameter("zone", zone, ParameterType.UrlSegment);
             request.AddParameter("weight", weight, ParameterType.UrlSegment);
-            var response = _client.Execute<ShippingCost>(request);
+            var response = _client.Execute<ShippingCostLookupEntry>(request);
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
                 return null;
@@ -78,10 +71,10 @@ namespace Suncrest.ShippingCalculator.Models
         /// The entire table of ShippingCost objects
         /// </returns>
         /// <exception cref="System.Net.WebException">Unexpected response from ShippingService</exception>
-        public IEnumerable<ShippingCost> GetAll()
+        public IEnumerable<IShippingCostLookupEntry> GetAll()
         {
             var request = new RestRequest("Costs", Method.GET) { RequestFormat = DataFormat.Json };
-            var response = _client.Execute<List<ShippingCost>>(request);
+            var response = _client.Execute<List<ShippingCostLookupEntry>>(request);
             if (response.StatusCode != HttpStatusCode.OK)
             {
                 throw new WebException("Unexpected response from ShippingService");
@@ -89,6 +82,5 @@ namespace Suncrest.ShippingCalculator.Models
             return response.Data;
         }
 
-        public string ServiceUri { get { return _shippingServiceUri; } }
     }
 }

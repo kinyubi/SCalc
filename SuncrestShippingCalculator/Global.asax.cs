@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Http;
+using Suncrest.ShippingCalculator.App_Start;
 
 namespace Suncrest.ShippingCalculator
 {
@@ -13,6 +14,7 @@ namespace Suncrest.ShippingCalculator
     {
         protected void Application_Start()
         {
+            UnityConfig.RegisterTypes(UnityConfig.GetConfiguredContainer());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

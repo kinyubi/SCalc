@@ -6,43 +6,28 @@ using System;
 
 namespace Suncrest.ShippingCalculator.Models
 {
-    /// <summary>
-    /// Singleton representing a concrete implementation of IShippingZonesServiceClient.
-    /// </summary>
-    public class ShippingZonesServiceClient : IShippingZonesServiceClient
+    public class DefaultShippingZoneLookup : IShippingZonesLookup
     {
-        /// <summary>
-        /// Part of the singleton pattern implementation
-        /// </summary>
-        private static readonly Lazy<ShippingZonesServiceClient> lazy = new Lazy<ShippingZonesServiceClient>(() => new ShippingZonesServiceClient());
-
-        /// <summary>
-        /// Gets the ShippingCostsServiceClient instance.
-        /// </summary>
-        public static ShippingZonesServiceClient Instance { get { return lazy.Value; } }
-
-        /// <summary>
-        /// The ShippingServiceUri appsetting found in the Web.Config file.
-        /// </summary>
-        private string _shippingServiceUri;
 
         /// <summary>
         /// Implementation of a RestSharp library RESTful service client
         /// </summary>
         private IRestClient _client;
 
-        /// <summary>
-        /// Prevents a default instance of the <see cref="ShippingZonesServiceClient"/> class from being created.
-        /// </summary>
-        /// <exception cref="System.Collections.Generic.KeyNotFoundException">ShippingServiceUri key not found in AppSettings</exception>
-        private ShippingZonesServiceClient()
+        public string ServiceUri { get; private set; }
+
+        public DefaultShippingZoneLookup(IConfigurationWrapper configSettings)
         {
-            _shippingServiceUri = ConfigurationManager.AppSettings["ShippingServiceUri"];
-            if (ServiceUri == null)
+            if (!configSettings.HasKey("ShippingServiceUri"))
             {
-                throw new KeyNotFoundException("ShippingServiceUri key not found in AppSettings");
+                throw new KeyNotFoundException("ShippingServiceUri key not found in configuration");
             }
+            ServiceUri = configSettings.GetValue("ShippingServiceUri");
             _client = new RestClient(ServiceUri);
+        }
+
+        public DefaultShippingZoneLookup() : this(DefaultConfigurationWrapper.Instance)
+        {
         }
 
         /// <summary>
@@ -53,11 +38,11 @@ namespace Suncrest.ShippingCalculator.Models
         /// should return a ShippingZone object or null if none found
         /// </returns>
         /// <exception cref="System.Net.WebException">Unexpected response from ShippingZonesService</exception>
-        public ShippingZone GetOne(string zip)
+        public IShippingZoneLookupEntry GetOne(string zip)
         {
             var request = new RestRequest("Zones/{zip}", Method.GET) { RequestFormat = DataFormat.Json };
             request.AddParameter("zip", zip, ParameterType.UrlSegment);
-            var response = _client.Execute<ShippingZone>(request);
+            var response = _client.Execute<ShippingZoneLookupEntry>(request);
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
                 return null;
@@ -76,17 +61,15 @@ namespace Suncrest.ShippingCalculator.Models
         /// an entire array of ShippingZone objects
         /// </returns>
         /// <exception cref="System.Net.WebException">Unexpected response from ShippingZonesService</exception>
-        public IEnumerable<ShippingZone> GetAll()
+        public IEnumerable<IShippingZoneLookupEntry> GetAll()
         {
             var request = new RestRequest("Zones", Method.GET) { RequestFormat = DataFormat.Json };
-            var response = _client.Execute<List<ShippingZone>>(request);
+            var response = _client.Execute<List<ShippingZoneLookupEntry>>(request);
             if (response.StatusCode != HttpStatusCode.OK)
             {
                 throw new WebException("Unexpected response from ShippingZonesService");
             }
             return response.Data;
         }
-
-        public string ServiceUri { get { return _shippingServiceUri; } }
     }
 }

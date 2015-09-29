@@ -17,7 +17,7 @@ namespace Suncrest.ShippingCalculator.Models
         /// <summary>
         /// The ShippingServiceUri retrieved from Web.Config. Initialized by constructor.
         /// </summary>
-        static string _shippingServiceUri;
+        //static string _shippingServiceUri;
 
         /// <summary>
         /// If the ShippingServiceUri contains the value 'Fake' then the FakeShippingZonesServiceClient
@@ -26,21 +26,21 @@ namespace Suncrest.ShippingCalculator.Models
         /// </summary>
         /// <returns>an IShippingZonesServiceClient object</returns>
         /// <exception cref="System.Exception">ShippingServiceUri key not found in AppSettings</exception>
-        public static IShippingZonesServiceClient GetZonesClient()
-        {
-            if (_shippingServiceUri == null)
-            {
-                throw new Exception("ShippingServiceUri key not found in AppSettings");
-            }
-            else if (_shippingServiceUri.ToLower() == "fake")
-            {
-                return FakeShippingZonesServiceClient.Instance;
-            }
-            else
-            {
-                return ShippingZonesServiceClient.Instance;
-            }
-        }
+        //public static IShippingZonesLookup GetZonesClient()
+        //{
+        //    if (_shippingServiceUri == null)
+        //    {
+        //        throw new Exception("ShippingServiceUri key not found in AppSettings");
+        //    }
+        //    else if (_shippingServiceUri.ToLower() == "fake")
+        //    {
+        //        return AlternateShippingZonesLookup.Instance;
+        //    }
+        //    else
+        //    {
+        //        return DefaultShippingZoneLookup.Instance;
+        //    }
+        //}
 
         /// <summary>
         /// If the ShippingServiceUri contains the value 'Fake' then the FakeShippingCostsServiceClient
@@ -49,28 +49,28 @@ namespace Suncrest.ShippingCalculator.Models
         /// </summary>
         /// <returns>an IShippingCostsServiceClient object</returns>
         /// <exception cref="System.Exception">ShippingServiceUri key not found in AppSettings</exception>
-        public static IShippingCostsServiceClient GetCostsClient()
-        {
-            if (_shippingServiceUri == null)
-            {
-                throw new Exception("ShippingServiceUri key not found in AppSettings");
-            }
-            else if (_shippingServiceUri.ToLower() == "fake")
-            {
-                return FakeShippingCostServiceClient.Instance;
-            }
-            else
-            {
-                return ShippingCostsServiceClient.Instance;
-            }
-        }
+        //public static IShippingCostsLookup GetCostsClient()
+        //{
+        //    if (_shippingServiceUri == null)
+        //    {
+        //        throw new Exception("ShippingServiceUri key not found in AppSettings");
+        //    }
+        //    else if (_shippingServiceUri.ToLower() == "fake")
+        //    {
+        //        return AlternateShippingCostLookup.Instance;
+        //    }
+        //    else
+        //    {
+        //        return DefaultShippingCostLookup.Instance;
+        //    }
+        //}
 
         /// <summary>
         /// Initializes the <see cref="ServiceFactory"/> class.
         /// </summary>
-        static ServiceFactory()
-        {
-            _shippingServiceUri = ConfigurationManager.AppSettings["ShippingServiceUri"];
-        }
+        //static ServiceFactory()
+        //{
+        //    _shippingServiceUri = ConfigurationManager.AppSettings["ShippingServiceUri"];
+        //}
     }
 }

@@ -8,47 +8,40 @@ namespace Suncrest.ShippingCalculator.Models
     /// <summary>
     /// Represents the shipping calculation and includes inputs, outputs and status of the calculation
     /// </summary>
-    public class ShippingCalculation
+    public class Calculator
     {
         /// <summary>
         /// The ShippingCost object returned by the shipping cost service client
         /// </summary>
-        private ShippingCost _costTier;
+        private IShippingCostLookupEntry _costTier;
 
         /// <summary>
         /// The ShippingZone object returned the the shipping zone service client.
         /// </summary>
-        private ShippingZone _zipZone;
+        private IShippingZoneLookupEntry _zipZone;
+
+        private IShippingCostsLookup _costLookupClient;
+
+        private IShippingZonesLookup _zoneLookupClient;
 
         /// <summary>
         /// Gets or sets the inputs used to make the shipping cost calculation.
         /// </summary>
-        public CalculationInputs Inputs {get; set; }
+        public ICalculationInputs Inputs {get; set; }
 
         /// <summary>
         /// Gets or sets the CalculationResults object which represents the calculation result.
         /// </summary>
-        public CalculationResults Results { get; set; }
+        public ICalculationResults Results { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ShippingCalculation"/> class.
+        /// Initializes a new instance of the <see cref="Calculator"/> class.
         /// </summary>
-        public ShippingCalculation() : this(null, 0m) {}
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ShippingCalculation"/> class.
-        /// </summary>
-        /// <param name="zip">The zipcode.</param>
-        /// <param name="weight">The weight.</param>
-        public ShippingCalculation(string zip, decimal weight) 
+        public Calculator(IShippingZonesLookup zoneLookupClient, IShippingCostsLookup costLookupClient)
         {
-            Results = new CalculationResults
-                {
-                    ZipCode = zip,
-                    Weight = weight
-                };
-            Inputs = new CalculationInputs(zip, weight);
-            DoCompute();
+            _costLookupClient = costLookupClient;
+            _zoneLookupClient = zoneLookupClient;
+            Results = new CalculationResults();
         }
 
         /// <summary>
@@ -56,21 +49,22 @@ namespace Suncrest.ShippingCalculator.Models
         /// </summary>
         /// <param name="zip">The zip.</param>
         /// <param name="weight">The weight.</param>
-        public void Compute(string zip, decimal weight)
+        public ICalculationResults Compute(string zip, decimal weight)
         {
             Inputs = new CalculationInputs(zip,weight);
             Results.ZipCode = zip;
             Results.Weight = weight;
             DoCompute();
+            return Results;
         }
 
         /// <summary>
         /// Computes the shipping cost based on the inputs. Creates the Results object.
         /// </summary>
         /// <param name="inputs">The input object containing a zipcode and a weight</param>
-        public void Compute(CalculationInputs inputs)
+        public ICalculationResults Compute(CalculationInputs inputs)
         { 
-            Compute(inputs.ZipCode, inputs.Weight);
+            return Compute(inputs.ZipCode, inputs.Weight);
         }
 
         /// <summary>
@@ -78,13 +72,14 @@ namespace Suncrest.ShippingCalculator.Models
         /// has already been created and returns on exception if it hasn't. Creates the Results object. 
         /// </summary>
         /// <exception cref="System.NullReferenceException">CalculationInput object was null</exception>
-        public void Compute()
+        public ICalculationResults Compute()
         {
             if (Inputs == null)
             {
                 throw new NullReferenceException("CalculationInput object was null");
             }
             DoCompute();
+            return Results;
         }
 
         /// <summary>
@@ -112,8 +107,7 @@ namespace Suncrest.ShippingCalculator.Models
                     throw new ArgumentOutOfRangeException("zip", Inputs.ZipCode, "Zip code must be 5 digits");
                 }
                 //determine the zone for the specified zone by calling the service
-                IShippingZonesServiceClient _serviceClient = ServiceFactory.GetZonesClient();
-                _zipZone = _serviceClient.GetOne(Inputs.ZipCode);
+                _zipZone = _zoneLookupClient.GetOne(Inputs.ZipCode);
                 if (_zipZone == null)
                 {
                     Results.Status = StatusType.ZoneUnknownForSpecifiedZipCode;
@@ -128,8 +122,7 @@ namespace Suncrest.ShippingCalculator.Models
                     throw new ArgumentOutOfRangeException("weight", Inputs.Weight, "Weight must be greater than 0 and less than 100 lbs");
                 }
 
-                IShippingCostsServiceClient _shippingCostServiceClient = ServiceFactory.GetCostsClient();
-                _costTier = _shippingCostServiceClient.GetOne(Results.Zone, Inputs.Weight);
+                _costTier = _costLookupClient.GetOne(Results.Zone, Inputs.Weight);
 
                 if (_costTier == null)
                 {

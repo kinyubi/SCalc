@@ -24,6 +24,8 @@ WebPackages/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
+# OpenCover
+carl_*/
 #NUNIT
 *.VisualState.xml
 TestResult.xml

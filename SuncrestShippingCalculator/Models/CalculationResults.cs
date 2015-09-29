@@ -1,29 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Suncrest.ShippingCalculator.Models;
 
 namespace Suncrest.ShippingCalculator.Models
 {
-
-    /// <summary>
-    /// StatusType defines enumerations for the Status property in a 
-    /// CalculationResults object. The ShippingCalculation class sets
-    /// the Status value as it builds the the CalculationResults object.
-    /// </summary>
-    public enum StatusType
-    {
-        Success,
-        InvalidZipCode,
-        InvalidWeight,
-        ZoneUnknownForSpecifiedZipCode,
-        CostUnknownForZipCodeAndWeight,
-        UnknownError,
-        Unknown
-    };
-
     /// <summary>
     /// Created when the user provides a zip code and weight in the Index action in either
     /// the Home controller or Ajax controller. 
     /// </summary>
-    public class CalculationResults
+    public class CalculationResults : ICalculationResults, ICalculationInputs
     {
         /// <summary>
         /// Gets or sets the zip code. This is an input to the shipping cost calculation.

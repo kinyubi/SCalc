@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TestRun id="13c80569-3549-473e-8257-32d5abb793d3" name="carl@CARLSYOGA 2015-09-23 11:08:49" runUser="CARLSYOGA\carl" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <TestSettings name="Default Test Settings" id="3c175122-03ac-4f2b-9acc-95ec4ab5ea9b">
-    <Deployment userDeploymentRoot="C:\Repos\ShippingCalculator\ShippingCalculator" useDefaultDeploymentRoot="false" runDeploymentRoot="carl_CARLSYOGA 2015-09-23 11_08_49" />
+<TestRun id="a3841a61-3922-406f-880d-7111ac3a2aba" name="carl@CARLSYOGA 2015-09-23 18:58:59" runUser="CARLSYOGA\carl" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="a77c9c64-c123-401b-893f-1737a9dc9a33">
+    <Deployment userDeploymentRoot="C:\Repos\ShippingCalculator\ShippingCalculator" useDefaultDeploymentRoot="false" runDeploymentRoot="carl_CARLSYOGA 2015-09-23 18_58_59" />
     <Execution>
       <TestTypeSpecific />
       <AgentRule name="Execution Agents">
@@ -9,13 +9,17 @@
     </Execution>
     <Properties />
   </TestSettings>
-  <Times creation="2015-09-23T11:08:49.5965435-06:00" queuing="2015-09-23T11:08:53.4022258-06:00" start="2015-09-23T11:08:53.8166663-06:00" finish="2015-09-23T11:09:02.3292834-06:00" />
+  <Times creation="2015-09-23T18:58:59.2956945-06:00" queuing="2015-09-23T18:59:03.9461951-06:00" start="2015-09-23T18:59:04.2118238-06:00" finish="2015-09-23T18:59:11.7739350-06:00" />
   <ResultSummary outcome="Completed">
-    <Counters total="28" executed="28" passed="28" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Counters total="41" executed="41" passed="41" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
   </ResultSummary>
   <TestDefinitions>
+    <UnitTest name="TestAjaxController_ClearAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="5b9807bd-6e76-3df0-1657-14684429e345">
+      <Execution id="821356ac-adf7-4d02-a2b9-2d88d9d4c57e" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.AjaxControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestAjaxController_ClearAction" />
+    </UnitTest>
     <UnitTest name="ShippingZones_GetOne_When_OKExpected" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="cc1ee37a-1fc9-fe6f-0187-d3a2e8e74a78">
-      <Execution id="dda4a1fd-de57-4945-b4e8-2c4612d83115" />
+      <Execution id="1ccc7840-b3aa-4551-b754-ad975fb7bba3" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -24,26 +28,40 @@
       </Properties>
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingZonesServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingZones_GetOne_When_OKExpected" />
     </UnitTest>
-    <UnitTest name="Contact" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="31224d96-e8be-2b41-7cd5-8e3e5be95109">
-      <Execution id="5bf8210c-5190-451a-8404-6529d03fb703" />
-      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Contact" />
+    <UnitTest name="TestHomeController_CostsTableAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="8075f966-def9-6b9f-522c-ccabbd48a403">
+      <Execution id="85a9e9f4-5437-4e46-8637-7df62b9b4014" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestHomeController_CostsTableAction" />
+    </UnitTest>
+    <UnitTest name="TestAjaxController_CostsTableAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="a03823f7-588e-9c30-0df8-95223f00a506">
+      <Execution id="122e351a-7153-4200-9021-d1fc4ddefd87" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.AjaxControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestAjaxController_CostsTableAction" />
     </UnitTest>
     <UnitTest name="ShippingCalculation_ZoneValidButWeightMissing" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="80de7ed6-776e-5ac3-2ebd-4d63755894cc">
-      <Execution id="89fda7c4-2268-4c07-8bbe-487c2f3f190e" />
+      <Execution id="83fa5504-3fd1-4f1b-b76b-e5ae6f1b1b6b" />
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCalculationTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCalculation_ZoneValidButWeightMissing" />
     </UnitTest>
-    <UnitTest name="ShippingCosts_GetAll_Should_Succeed" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="7ee352c5-dd28-fa1a-d8a7-798cbddbb451">
-      <Execution id="b9b4fc93-374e-41df-9201-0a342f68d758" />
+    <UnitTest name="ShippingZones_GetAll_Should_Succeed" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="9af3d94f-8924-411e-8055-d08c4b01744f">
+      <Execution id="1def2dd2-cc1a-40cd-a917-86b4eb0b2df1" />
+      <Properties>
+        <Property>
+          <Key>__Internal_DeclaringClassName__</Key>
+          <Value>Suncrest.ShippingCalculator.Tests.BaseShippingZonesServiceClientTests</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingZonesServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingZones_GetAll_Should_Succeed" />
+    </UnitTest>
+    <UnitTest name="ShippingCosts_ServiceUri" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="b964bef7-56af-a0be-3992-fced69a081bb">
+      <Execution id="aee8b868-1464-447a-b0d1-0c1f9c31ca8d" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
           <Value>Suncrest.ShippingCalculator.Tests.BaseShippingCostsServiceClientTests</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetAll_Should_Succeed" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_ServiceUri" />
     </UnitTest>
     <UnitTest name="ShippingCosts_GetOne_When_ZoneInvalid" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="73334cd6-d29d-410c-4186-01540839395b">
-      <Execution id="8bd4b1ac-dbfb-467e-a00f-af05a95450f4" />
+      <Execution id="f59ee0b7-e524-47e5-bae5-28e8ac640117" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -53,7 +71,7 @@
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_ZoneInvalid" />
     </UnitTest>
     <UnitTest name="ShippingZones_GetOne_When_NotFoundExpected" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="f7ba845c-6169-a86a-08ec-6e3264e48e84">
-      <Execution id="6c537c55-54cc-4c88-960d-ccfac1e8d628" />
+      <Execution id="101b7665-b9f1-4f0a-90e7-893b5c5f2184" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -63,7 +81,7 @@
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingZonesServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingZones_GetOne_When_NotFoundExpected" />
     </UnitTest>
     <UnitTest name="ShippingCosts_GetOne_When_WeightAtHighLimit" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="d8009da1-95e6-936e-6cec-d91c0ea5b062">
-      <Execution id="e27cbd3d-73c2-4165-b41b-0f93a99a550e" />
+      <Execution id="b5a50369-5e69-49a6-8854-b14727d40175" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -72,18 +90,12 @@
       </Properties>
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_WeightAtHighLimit" />
     </UnitTest>
-    <UnitTest name="ShippingCosts_GetOne_When_WeightAtLowLimit" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="94f0d8ce-a35a-3027-d902-9aa839ea0524">
-      <Execution id="616e3b42-f678-4daf-881e-4e3a73fa8a81" />
-      <Properties>
-        <Property>
-          <Key>__Internal_DeclaringClassName__</Key>
-          <Value>Suncrest.ShippingCalculator.Tests.BaseShippingCostsServiceClientTests</Value>
-        </Property>
-      </Properties>
-      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_WeightAtLowLimit" />
+    <UnitTest name="TestHomeController_IndexAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="932763cc-fb89-9cd9-7c36-5fe2d8164002">
+      <Execution id="3fb0e5d7-e3af-4f74-b93b-6cdaae340902" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestHomeController_IndexAction" />
     </UnitTest>
     <UnitTest name="ShippingCosts_GetOne_When_ZoneInvalid" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="e0f26912-135a-de3e-0313-937f9921b2c1">
-      <Execution id="c64d27d8-174e-4b7e-bf1c-361f05c65c1e" />
+      <Execution id="8baa29d4-b5e2-48b6-91bf-989a2eee4613" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -92,8 +104,22 @@
       </Properties>
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_ZoneInvalid" />
     </UnitTest>
+    <UnitTest name="ShippingCosts_ServiceUri" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="e3e99a96-dab0-77c4-277a-5b1c39e2d8c1">
+      <Execution id="068dd407-9692-492b-9ac7-28f455b88f51" />
+      <Properties>
+        <Property>
+          <Key>__Internal_DeclaringClassName__</Key>
+          <Value>Suncrest.ShippingCalculator.Tests.BaseShippingCostsServiceClientTests</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_ServiceUri" />
+    </UnitTest>
+    <UnitTest name="TestHomeController_ClearCostsTableAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="4e45fcfe-bfb8-f6e4-dbb7-88d0bd726eff">
+      <Execution id="4308f9c1-8197-439d-aa5a-21c0a90764d0" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestHomeController_ClearCostsTableAction" />
+    </UnitTest>
     <UnitTest name="ShippingCosts_GetAll_Should_Succeed" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="ca8e9fbb-db5f-06db-df57-201a0377e37a">
-      <Execution id="e8a30239-84bf-4736-a9b9-a6d1282dc2c6" />
+      <Execution id="482ed59d-1b46-4d4c-a2ca-0b8c77a3c8b6" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -103,31 +129,51 @@
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetAll_Should_Succeed" />
     </UnitTest>
     <UnitTest name="ShippingCalculation_NoZoneForSpecifiedZip" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="73160925-c28d-f621-181b-dff734785ae0">
-      <Execution id="61a936a6-f983-46a8-a829-a138509647e3" />
+      <Execution id="e6693709-7d4f-44dc-b8a8-031fe28c5869" />
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCalculationTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCalculation_NoZoneForSpecifiedZip" />
     </UnitTest>
-    <UnitTest name="ShippingCosts_GetOne_When_WeightJustOverHighLimit" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="77ad3aad-7ef5-74ce-87dc-abd8ae5fc31b">
-      <Execution id="9e75ce84-7644-4fc8-8268-d4db088aa542" />
+    <UnitTest name="ShippingCosts_GetOne_When_WeightAtLowLimit" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="94f0d8ce-a35a-3027-d902-9aa839ea0524">
+      <Execution id="274ff5b8-5f42-41da-bdd2-6d93edeb0d34" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
           <Value>Suncrest.ShippingCalculator.Tests.BaseShippingCostsServiceClientTests</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_WeightJustOverHighLimit" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_WeightAtLowLimit" />
     </UnitTest>
-    <UnitTest name="ShippingZones_GetAll_Should_Succeed" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="9af3d94f-8924-411e-8055-d08c4b01744f">
-      <Execution id="57fda5fd-51f2-4dd8-8285-00d989534c76" />
+    <UnitTest name="TestHomeController_InputEntryAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="264b285a-a2dd-897f-7d77-66b83b3ebfe2">
+      <Execution id="2428866d-bb73-41f0-a97a-e94f9773846f" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestHomeController_InputEntryAction" />
+    </UnitTest>
+    <UnitTest name="TestHomeController_CalculationAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="01e3c3c3-4b61-b5e9-8e2d-fba8d861c8e7">
+      <Execution id="f4ba5c65-1f0d-4e79-bba1-aeaf2e1f2d7c" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestHomeController_CalculationAction" />
+    </UnitTest>
+    <UnitTest name="TestAjaxController_IndexAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="73d7eb75-e013-de84-79d0-8df18f914825">
+      <Execution id="605d7d5c-3012-4f58-be3a-4a7dbc8486c8" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.AjaxControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestAjaxController_IndexAction" />
+    </UnitTest>
+    <UnitTest name="TestHomeController_ClearZonesTableAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="569fac83-4697-0b46-c562-92099b82070e">
+      <Execution id="734d2cfb-ff08-4639-9120-40b83898e2f7" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestHomeController_ClearZonesTableAction" />
+    </UnitTest>
+    <UnitTest name="ShippingCosts_GetAll_Should_Succeed" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="7ee352c5-dd28-fa1a-d8a7-798cbddbb451">
+      <Execution id="6b8e7507-66f2-44aa-b9c6-78de665ced1b" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
-          <Value>Suncrest.ShippingCalculator.Tests.BaseShippingZonesServiceClientTests</Value>
+          <Value>Suncrest.ShippingCalculator.Tests.BaseShippingCostsServiceClientTests</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingZonesServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingZones_GetAll_Should_Succeed" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetAll_Should_Succeed" />
+    </UnitTest>
+    <UnitTest name="TestHomeController_ZonesTableAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="0959826b-7e99-4a3b-355b-dd073bd8a125">
+      <Execution id="74aa9e8d-d455-49aa-8972-62f2cbee7519" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestHomeController_ZonesTableAction" />
     </UnitTest>
     <UnitTest name="ShippingCosts_GetOne_When_WeightZero_ShouldBe_Null" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="42f2a3bb-dfa9-d433-9b9d-04608bfe5a97">
-      <Execution id="12c6f279-c86d-475f-b1dd-cd37a13ab489" />
+      <Execution id="7477e39a-e413-4c19-8886-15afa9fdbee5" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -137,7 +183,7 @@
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_WeightZero_ShouldBe_Null" />
     </UnitTest>
     <UnitTest name="ShippingZones_GetOne_When_NotFoundExpected" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="0de95335-fe93-81ba-0473-d2bf32a84f88">
-      <Execution id="f1312ad4-43e4-48f3-b9c2-f9cefb63ccce" />
+      <Execution id="d5e46c4c-2028-451d-8796-aa35aecb2b85" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -147,7 +193,7 @@
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingZonesServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingZones_GetOne_When_NotFoundExpected" />
     </UnitTest>
     <UnitTest name="ShippingCosts_GetOne_When_WeightAtLowLimit" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="917310b0-f576-6b8c-ee78-c57ec1eae9ef">
-      <Execution id="06bf350f-d668-4c31-80ac-593e6b65a2bb" />
+      <Execution id="80d69fd2-da21-4ed3-96d8-5f44c470e212" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -156,12 +202,8 @@
       </Properties>
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_WeightAtLowLimit" />
     </UnitTest>
-    <UnitTest name="About" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="b2cb8f81-ce61-7446-158b-e8960c79e6e2">
-      <Execution id="a868aad7-128c-4d0d-abda-439d11b23c5b" />
-      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
-    </UnitTest>
     <UnitTest name="ShippingZones_GetAll_Should_Succeed" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="841ab221-4904-79fc-f73c-c32b6f8561d5">
-      <Execution id="676968c0-876a-4bc9-902e-8224504ff8cd" />
+      <Execution id="c8db0ff3-0b59-4a19-91c6-0f2b6bb6fc8b" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -170,8 +212,26 @@
       </Properties>
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingZonesServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingZones_GetAll_Should_Succeed" />
     </UnitTest>
+    <UnitTest name="TestAjaxController_ZonesTableAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="171633ca-6a70-01be-ff32-d74d20176cc0">
+      <Execution id="342e2b13-e6c3-4122-94dd-0be80a100f40" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.AjaxControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestAjaxController_ZonesTableAction" />
+    </UnitTest>
+    <UnitTest name="TestHomeController_ContactAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="1b4c9ea6-171e-9839-904b-4eea7261c60a">
+      <Execution id="1a7f3c2b-aab9-4141-a763-c3e037ff19ee" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestHomeController_ContactAction" />
+    </UnitTest>
+    <UnitTest name="ShippingCosts_GetOne_When_WeightJustOverHighLimit" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="77ad3aad-7ef5-74ce-87dc-abd8ae5fc31b">
+      <Execution id="03c4222e-a5c4-47a1-bb17-328259c2dba0" />
+      <Properties>
+        <Property>
+          <Key>__Internal_DeclaringClassName__</Key>
+          <Value>Suncrest.ShippingCalculator.Tests.BaseShippingCostsServiceClientTests</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_WeightJustOverHighLimit" />
+    </UnitTest>
     <UnitTest name="ShippingCosts_GetOne_When_WeightJustOverHighLimit" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="da979bce-8406-2156-7bc6-493920f97727">
-      <Execution id="7e4257d7-6c2b-4bc1-8da9-a8217d7092b6" />
+      <Execution id="ffc0c1f5-41e5-4b70-b5ed-63509bc6d5e8" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -181,11 +241,11 @@
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_WeightJustOverHighLimit" />
     </UnitTest>
     <UnitTest name="ShippingCalculation_InvalidZip" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="a8523ccf-feb4-e404-54fe-4e25b69eb4df">
-      <Execution id="36759760-0ec1-4027-82fd-db733a3d4679" />
+      <Execution id="bdc309b2-f4dc-482d-8ff9-c94987c934b6" />
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCalculationTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCalculation_InvalidZip" />
     </UnitTest>
     <UnitTest name="ShippingCosts_GetOne_When_WeightZero_ShouldBe_Null" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="60440f65-f466-a730-0abf-144bdd5b221c">
-      <Execution id="f7cd9249-be77-469f-9fb8-736ed550d94c" />
+      <Execution id="5bdac8be-9862-4ec0-9bc6-54861948eced" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -195,7 +255,7 @@
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_WeightZero_ShouldBe_Null" />
     </UnitTest>
     <UnitTest name="ShippingZones_GetOne_When_OKExpected" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="56475026-18d2-398f-2e8a-6773ade4d1e0">
-      <Execution id="3bf14a83-c6b4-4b0f-b1ff-6c7b0ef70313" />
+      <Execution id="c5723d4d-cbbb-4197-8fb8-63654c16b94e" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -204,12 +264,16 @@
       </Properties>
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingZonesServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingZones_GetOne_When_OKExpected" />
     </UnitTest>
+    <UnitTest name="TestAjaxController_CalculationResultAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="42947ed7-85ed-5c92-8d3c-78e69d9ba2fc">
+      <Execution id="77012933-7f63-4d18-9c0f-f571dade9598" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.AjaxControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestAjaxController_CalculationResultAction" />
+    </UnitTest>
     <UnitTest name="ShippingCalculation_ShouldBeValid" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="62ed5f1b-cc09-fcdf-5b19-5a73ab232779">
-      <Execution id="7e49f632-5209-4ba1-ab3e-7868fe564fbd" />
+      <Execution id="1731ae87-2a12-4c57-9bb2-b98ffd06be80" />
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCalculationTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCalculation_ShouldBeValid" />
     </UnitTest>
     <UnitTest name="ShippingCosts_GetOne_When_ZoneValidAndWeightOutOfRange" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="6428dd7c-2d56-1138-914b-3a2a8defd2ec">
-      <Execution id="ddc798be-ad92-4eac-8f63-cc7b874f1f21" />
+      <Execution id="b9e8702e-57e8-4765-a4b8-c72a6c5dae53" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -218,16 +282,16 @@
       </Properties>
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_ZoneValidAndWeightOutOfRange" />
     </UnitTest>
-    <UnitTest name="Index" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="bd5b0011-e6ef-cdae-3d93-7875515c6fd6">
-      <Execution id="3f78f519-aa26-4cf8-9419-60cf1b7b3524" />
-      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
-    </UnitTest>
     <UnitTest name="ShippingCalculation_WeightOutOfRange" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="4cdbfd6e-f56e-ffd9-3487-45efe2813347">
-      <Execution id="a817e6c3-ff07-4111-a3fa-cd866d19953c" />
+      <Execution id="7cb55442-6ebc-47e2-b3c9-5d1c2d309f48" />
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.ShippingCalculationTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCalculation_WeightOutOfRange" />
     </UnitTest>
+    <UnitTest name="TestHomeController_AboutAction" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="1f45678e-32e6-cc40-9208-cfe3715a0548">
+      <Execution id="fa34f2ac-221e-46aa-b779-3e8aaabd19df" />
+      <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.Controllers.HomeControllerTest, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestHomeController_AboutAction" />
+    </UnitTest>
     <UnitTest name="ShippingCosts_GetOne_When_WeightAtHighLimit" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="f4bb79df-f5ba-32b3-f456-69cab9527c7b">
-      <Execution id="cb19f37b-21d3-4c5e-beb0-91bbb4bbb764" />
+      <Execution id="568880f3-bf2a-4bd9-8259-e57586ac224d" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -237,7 +301,7 @@
       <TestMethod codeBase="C:/Repos/ShippingCalculator/ShippingCalculator/SuncrestShippingCalculator.Tests/bin/Debug/SuncrestShippingCalculator.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Suncrest.ShippingCalculator.Tests.FakeShippingCostsServiceClientTests, SuncrestShippingCalculator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShippingCosts_GetOne_When_WeightAtHighLimit" />
     </UnitTest>
     <UnitTest name="ShippingCosts_GetOne_When_ZoneValidAndWeightOutOfRange" storage="c:\repos\shippingcalculator\shippingcalculator\suncrestshippingcalculator.tests\bin\debug\suncrestshippingcalculator.tests.dll" id="e68f2623-0be8-5756-a19d-acbe2b74c52e">
-      <Execution id="79d85cb8-3599-4299-aebb-b08381c3a308" />
+      <Execution id="f454d40a-d29e-4bd1-92d4-7ceac19754a6" />
       <Properties>
         <Property>
           <Key>__Internal_DeclaringClassName__</Key>
@@ -252,91 +316,130 @@
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
   <TestEntries>
-    <TestEntry testId="b2cb8f81-ce61-7446-158b-e8960c79e6e2" executionId="a868aad7-128c-4d0d-abda-439d11b23c5b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="31224d96-e8be-2b41-7cd5-8e3e5be95109" executionId="5bf8210c-5190-451a-8404-6529d03fb703" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="bd5b0011-e6ef-cdae-3d93-7875515c6fd6" executionId="3f78f519-aa26-4cf8-9419-60cf1b7b3524" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ca8e9fbb-db5f-06db-df57-201a0377e37a" executionId="e8a30239-84bf-4736-a9b9-a6d1282dc2c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="f4bb79df-f5ba-32b3-f456-69cab9527c7b" executionId="cb19f37b-21d3-4c5e-beb0-91bbb4bbb764" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="917310b0-f576-6b8c-ee78-c57ec1eae9ef" executionId="06bf350f-d668-4c31-80ac-593e6b65a2bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="da979bce-8406-2156-7bc6-493920f97727" executionId="7e4257d7-6c2b-4bc1-8da9-a8217d7092b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="42f2a3bb-dfa9-d433-9b9d-04608bfe5a97" executionId="12c6f279-c86d-475f-b1dd-cd37a13ab489" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="73334cd6-d29d-410c-4186-01540839395b" executionId="8bd4b1ac-dbfb-467e-a00f-af05a95450f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="6428dd7c-2d56-1138-914b-3a2a8defd2ec" executionId="ddc798be-ad92-4eac-8f63-cc7b874f1f21" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="9af3d94f-8924-411e-8055-d08c4b01744f" executionId="57fda5fd-51f2-4dd8-8285-00d989534c76" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0de95335-fe93-81ba-0473-d2bf32a84f88" executionId="f1312ad4-43e4-48f3-b9c2-f9cefb63ccce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="56475026-18d2-398f-2e8a-6773ade4d1e0" executionId="3bf14a83-c6b4-4b0f-b1ff-6c7b0ef70313" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="a8523ccf-feb4-e404-54fe-4e25b69eb4df" executionId="36759760-0ec1-4027-82fd-db733a3d4679" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="73160925-c28d-f621-181b-dff734785ae0" executionId="61a936a6-f983-46a8-a829-a138509647e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="62ed5f1b-cc09-fcdf-5b19-5a73ab232779" executionId="7e49f632-5209-4ba1-ab3e-7868fe564fbd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="4cdbfd6e-f56e-ffd9-3487-45efe2813347" executionId="a817e6c3-ff07-4111-a3fa-cd866d19953c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="80de7ed6-776e-5ac3-2ebd-4d63755894cc" executionId="89fda7c4-2268-4c07-8bbe-487c2f3f190e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="7ee352c5-dd28-fa1a-d8a7-798cbddbb451" executionId="b9b4fc93-374e-41df-9201-0a342f68d758" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="d8009da1-95e6-936e-6cec-d91c0ea5b062" executionId="e27cbd3d-73c2-4165-b41b-0f93a99a550e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="94f0d8ce-a35a-3027-d902-9aa839ea0524" executionId="616e3b42-f678-4daf-881e-4e3a73fa8a81" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="77ad3aad-7ef5-74ce-87dc-abd8ae5fc31b" executionId="9e75ce84-7644-4fc8-8268-d4db088aa542" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="60440f65-f466-a730-0abf-144bdd5b221c" executionId="f7cd9249-be77-469f-9fb8-736ed550d94c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="e0f26912-135a-de3e-0313-937f9921b2c1" executionId="c64d27d8-174e-4b7e-bf1c-361f05c65c1e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="e68f2623-0be8-5756-a19d-acbe2b74c52e" executionId="79d85cb8-3599-4299-aebb-b08381c3a308" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="841ab221-4904-79fc-f73c-c32b6f8561d5" executionId="676968c0-876a-4bc9-902e-8224504ff8cd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="f7ba845c-6169-a86a-08ec-6e3264e48e84" executionId="6c537c55-54cc-4c88-960d-ccfac1e8d628" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cc1ee37a-1fc9-fe6f-0187-d3a2e8e74a78" executionId="dda4a1fd-de57-4945-b4e8-2c4612d83115" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="42947ed7-85ed-5c92-8d3c-78e69d9ba2fc" executionId="77012933-7f63-4d18-9c0f-f571dade9598" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b9807bd-6e76-3df0-1657-14684429e345" executionId="821356ac-adf7-4d02-a2b9-2d88d9d4c57e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a03823f7-588e-9c30-0df8-95223f00a506" executionId="122e351a-7153-4200-9021-d1fc4ddefd87" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="73d7eb75-e013-de84-79d0-8df18f914825" executionId="605d7d5c-3012-4f58-be3a-4a7dbc8486c8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="171633ca-6a70-01be-ff32-d74d20176cc0" executionId="342e2b13-e6c3-4122-94dd-0be80a100f40" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f45678e-32e6-cc40-9208-cfe3715a0548" executionId="fa34f2ac-221e-46aa-b779-3e8aaabd19df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01e3c3c3-4b61-b5e9-8e2d-fba8d861c8e7" executionId="f4ba5c65-1f0d-4e79-bba1-aeaf2e1f2d7c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4e45fcfe-bfb8-f6e4-dbb7-88d0bd726eff" executionId="4308f9c1-8197-439d-aa5a-21c0a90764d0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="569fac83-4697-0b46-c562-92099b82070e" executionId="734d2cfb-ff08-4639-9120-40b83898e2f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b4c9ea6-171e-9839-904b-4eea7261c60a" executionId="1a7f3c2b-aab9-4141-a763-c3e037ff19ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8075f966-def9-6b9f-522c-ccabbd48a403" executionId="85a9e9f4-5437-4e46-8637-7df62b9b4014" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="932763cc-fb89-9cd9-7c36-5fe2d8164002" executionId="3fb0e5d7-e3af-4f74-b93b-6cdaae340902" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="264b285a-a2dd-897f-7d77-66b83b3ebfe2" executionId="2428866d-bb73-41f0-a97a-e94f9773846f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0959826b-7e99-4a3b-355b-dd073bd8a125" executionId="74aa9e8d-d455-49aa-8972-62f2cbee7519" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ca8e9fbb-db5f-06db-df57-201a0377e37a" executionId="482ed59d-1b46-4d4c-a2ca-0b8c77a3c8b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4bb79df-f5ba-32b3-f456-69cab9527c7b" executionId="568880f3-bf2a-4bd9-8259-e57586ac224d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="917310b0-f576-6b8c-ee78-c57ec1eae9ef" executionId="80d69fd2-da21-4ed3-96d8-5f44c470e212" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="da979bce-8406-2156-7bc6-493920f97727" executionId="ffc0c1f5-41e5-4b70-b5ed-63509bc6d5e8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="42f2a3bb-dfa9-d433-9b9d-04608bfe5a97" executionId="7477e39a-e413-4c19-8886-15afa9fdbee5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="73334cd6-d29d-410c-4186-01540839395b" executionId="f59ee0b7-e524-47e5-bae5-28e8ac640117" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6428dd7c-2d56-1138-914b-3a2a8defd2ec" executionId="b9e8702e-57e8-4765-a4b8-c72a6c5dae53" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b964bef7-56af-a0be-3992-fced69a081bb" executionId="aee8b868-1464-447a-b0d1-0c1f9c31ca8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9af3d94f-8924-411e-8055-d08c4b01744f" executionId="1def2dd2-cc1a-40cd-a917-86b4eb0b2df1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0de95335-fe93-81ba-0473-d2bf32a84f88" executionId="d5e46c4c-2028-451d-8796-aa35aecb2b85" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="56475026-18d2-398f-2e8a-6773ade4d1e0" executionId="c5723d4d-cbbb-4197-8fb8-63654c16b94e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a8523ccf-feb4-e404-54fe-4e25b69eb4df" executionId="bdc309b2-f4dc-482d-8ff9-c94987c934b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="73160925-c28d-f621-181b-dff734785ae0" executionId="e6693709-7d4f-44dc-b8a8-031fe28c5869" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62ed5f1b-cc09-fcdf-5b19-5a73ab232779" executionId="1731ae87-2a12-4c57-9bb2-b98ffd06be80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4cdbfd6e-f56e-ffd9-3487-45efe2813347" executionId="7cb55442-6ebc-47e2-b3c9-5d1c2d309f48" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="80de7ed6-776e-5ac3-2ebd-4d63755894cc" executionId="83fa5504-3fd1-4f1b-b76b-e5ae6f1b1b6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ee352c5-dd28-fa1a-d8a7-798cbddbb451" executionId="6b8e7507-66f2-44aa-b9c6-78de665ced1b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d8009da1-95e6-936e-6cec-d91c0ea5b062" executionId="b5a50369-5e69-49a6-8854-b14727d40175" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="94f0d8ce-a35a-3027-d902-9aa839ea0524" executionId="274ff5b8-5f42-41da-bdd2-6d93edeb0d34" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="77ad3aad-7ef5-74ce-87dc-abd8ae5fc31b" executionId="03c4222e-a5c4-47a1-bb17-328259c2dba0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60440f65-f466-a730-0abf-144bdd5b221c" executionId="5bdac8be-9862-4ec0-9bc6-54861948eced" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e0f26912-135a-de3e-0313-937f9921b2c1" executionId="8baa29d4-b5e2-48b6-91bf-989a2eee4613" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e68f2623-0be8-5756-a19d-acbe2b74c52e" executionId="f454d40a-d29e-4bd1-92d4-7ceac19754a6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e3e99a96-dab0-77c4-277a-5b1c39e2d8c1" executionId="068dd407-9692-492b-9ac7-28f455b88f51" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="841ab221-4904-79fc-f73c-c32b6f8561d5" executionId="c8db0ff3-0b59-4a19-91c6-0f2b6bb6fc8b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7ba845c-6169-a86a-08ec-6e3264e48e84" executionId="101b7665-b9f1-4f0a-90e7-893b5c5f2184" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc1ee37a-1fc9-fe6f-0187-d3a2e8e74a78" executionId="1ccc7840-b3aa-4551-b754-ad975fb7bba3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <Results>
-    <UnitTestResult executionId="a868aad7-128c-4d0d-abda-439d11b23c5b" testId="b2cb8f81-ce61-7446-158b-e8960c79e6e2" testName="About" computerName="CARLSYOGA" duration="00:00:00.8118619" startTime="2015-09-23T11:08:54.1406573-06:00" endTime="2015-09-23T11:08:56.3562012-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a868aad7-128c-4d0d-abda-439d11b23c5b">
+    <UnitTestResult executionId="77012933-7f63-4d18-9c0f-f571dade9598" testId="42947ed7-85ed-5c92-8d3c-78e69d9ba2fc" testName="TestAjaxController_CalculationResultAction" computerName="CARLSYOGA" duration="00:00:01.3677196" startTime="2015-09-23T18:59:04.2964014-06:00" endTime="2015-09-23T18:59:06.8030288-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77012933-7f63-4d18-9c0f-f571dade9598">
     </UnitTestResult>
-    <UnitTestResult executionId="5bf8210c-5190-451a-8404-6529d03fb703" testId="31224d96-e8be-2b41-7cd5-8e3e5be95109" testName="Contact" computerName="CARLSYOGA" duration="00:00:00.0028729" startTime="2015-09-23T11:08:56.3718269-06:00" endTime="2015-09-23T11:08:56.3718269-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5bf8210c-5190-451a-8404-6529d03fb703">
+    <UnitTestResult executionId="821356ac-adf7-4d02-a2b9-2d88d9d4c57e" testId="5b9807bd-6e76-3df0-1657-14684429e345" testName="TestAjaxController_ClearAction" computerName="CARLSYOGA" duration="00:00:00.0023007" startTime="2015-09-23T18:59:06.8225777-06:00" endTime="2015-09-23T18:59:06.8258878-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="821356ac-adf7-4d02-a2b9-2d88d9d4c57e">
     </UnitTestResult>
-    <UnitTestResult executionId="3f78f519-aa26-4cf8-9419-60cf1b7b3524" testId="bd5b0011-e6ef-cdae-3d93-7875515c6fd6" testName="Index" computerName="CARLSYOGA" duration="00:00:00.0006701" startTime="2015-09-23T11:08:56.3874521-06:00" endTime="2015-09-23T11:08:56.3874521-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f78f519-aa26-4cf8-9419-60cf1b7b3524">
+    <UnitTestResult executionId="122e351a-7153-4200-9021-d1fc4ddefd87" testId="a03823f7-588e-9c30-0df8-95223f00a506" testName="TestAjaxController_CostsTableAction" computerName="CARLSYOGA" duration="00:00:00.0654332" startTime="2015-09-23T18:59:06.8415130-06:00" endTime="2015-09-23T18:59:06.9352634-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="122e351a-7153-4200-9021-d1fc4ddefd87">
     </UnitTestResult>
-    <UnitTestResult executionId="e8a30239-84bf-4736-a9b9-a6d1282dc2c6" testId="ca8e9fbb-db5f-06db-df57-201a0377e37a" testName="ShippingCosts_GetAll_Should_Succeed" computerName="CARLSYOGA" duration="00:00:00.0155512" startTime="2015-09-23T11:08:56.3874521-06:00" endTime="2015-09-23T11:08:56.4187059-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e8a30239-84bf-4736-a9b9-a6d1282dc2c6">
+    <UnitTestResult executionId="605d7d5c-3012-4f58-be3a-4a7dbc8486c8" testId="73d7eb75-e013-de84-79d0-8df18f914825" testName="TestAjaxController_IndexAction" computerName="CARLSYOGA" duration="00:00:00.0043945" startTime="2015-09-23T18:59:06.9508895-06:00" endTime="2015-09-23T18:59:06.9822122-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="605d7d5c-3012-4f58-be3a-4a7dbc8486c8">
     </UnitTestResult>
-    <UnitTestResult executionId="cb19f37b-21d3-4c5e-beb0-91bbb4bbb764" testId="f4bb79df-f5ba-32b3-f456-69cab9527c7b" testName="ShippingCosts_GetOne_When_WeightAtHighLimit" computerName="CARLSYOGA" duration="00:00:00.0042555" startTime="2015-09-23T11:08:56.4187059-06:00" endTime="2015-09-23T11:08:56.4343273-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb19f37b-21d3-4c5e-beb0-91bbb4bbb764">
+    <UnitTestResult executionId="342e2b13-e6c3-4122-94dd-0be80a100f40" testId="171633ca-6a70-01be-ff32-d74d20176cc0" testName="TestAjaxController_ZonesTableAction" computerName="CARLSYOGA" duration="00:00:00.0453882" startTime="2015-09-23T18:59:07.0082273-06:00" endTime="2015-09-23T18:59:07.0720658-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="342e2b13-e6c3-4122-94dd-0be80a100f40">
     </UnitTestResult>
-    <UnitTestResult executionId="06bf350f-d668-4c31-80ac-593e6b65a2bb" testId="917310b0-f576-6b8c-ee78-c57ec1eae9ef" testName="ShippingCosts_GetOne_When_WeightAtLowLimit" computerName="CARLSYOGA" duration="00:00:00.0003960" startTime="2015-09-23T11:08:56.4343273-06:00" endTime="2015-09-23T11:08:56.4499529-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06bf350f-d668-4c31-80ac-593e6b65a2bb">
+    <UnitTestResult executionId="fa34f2ac-221e-46aa-b779-3e8aaabd19df" testId="1f45678e-32e6-cc40-9208-cfe3715a0548" testName="TestHomeController_AboutAction" computerName="CARLSYOGA" duration="00:00:01.5605169" startTime="2015-09-23T18:59:07.0860758-06:00" endTime="2015-09-23T18:59:08.6524037-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa34f2ac-221e-46aa-b779-3e8aaabd19df">
     </UnitTestResult>
-    <UnitTestResult executionId="7e4257d7-6c2b-4bc1-8da9-a8217d7092b6" testId="da979bce-8406-2156-7bc6-493920f97727" testName="ShippingCosts_GetOne_When_WeightJustOverHighLimit" computerName="CARLSYOGA" duration="00:00:00.0033476" startTime="2015-09-23T11:08:56.4499529-06:00" endTime="2015-09-23T11:08:56.4655790-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e4257d7-6c2b-4bc1-8da9-a8217d7092b6">
+    <UnitTestResult executionId="f4ba5c65-1f0d-4e79-bba1-aeaf2e1f2d7c" testId="01e3c3c3-4b61-b5e9-8e2d-fba8d861c8e7" testName="TestHomeController_CalculationAction" computerName="CARLSYOGA" duration="00:00:00.0680672" startTime="2015-09-23T18:59:08.6680217-06:00" endTime="2015-09-23T18:59:08.7305230-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f4ba5c65-1f0d-4e79-bba1-aeaf2e1f2d7c">
     </UnitTestResult>
-    <UnitTestResult executionId="12c6f279-c86d-475f-b1dd-cd37a13ab489" testId="42f2a3bb-dfa9-d433-9b9d-04608bfe5a97" testName="ShippingCosts_GetOne_When_WeightZero_ShouldBe_Null" computerName="CARLSYOGA" duration="00:00:00.0003861" startTime="2015-09-23T11:08:56.4655790-06:00" endTime="2015-09-23T11:08:56.4655790-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12c6f279-c86d-475f-b1dd-cd37a13ab489">
+    <UnitTestResult executionId="4308f9c1-8197-439d-aa5a-21c0a90764d0" testId="4e45fcfe-bfb8-f6e4-dbb7-88d0bd726eff" testName="TestHomeController_ClearCostsTableAction" computerName="CARLSYOGA" duration="00:00:00.0022011" startTime="2015-09-23T18:59:08.7461473-06:00" endTime="2015-09-23T18:59:08.7617712-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4308f9c1-8197-439d-aa5a-21c0a90764d0">
     </UnitTestResult>
-    <UnitTestResult executionId="8bd4b1ac-dbfb-467e-a00f-af05a95450f4" testId="73334cd6-d29d-410c-4186-01540839395b" testName="ShippingCosts_GetOne_When_ZoneInvalid" computerName="CARLSYOGA" duration="00:00:00.0004263" startTime="2015-09-23T11:08:56.4812034-06:00" endTime="2015-09-23T11:08:56.4931063-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8bd4b1ac-dbfb-467e-a00f-af05a95450f4">
+    <UnitTestResult executionId="734d2cfb-ff08-4639-9120-40b83898e2f7" testId="569fac83-4697-0b46-c562-92099b82070e" testName="TestHomeController_ClearZonesTableAction" computerName="CARLSYOGA" duration="00:00:00.0022892" startTime="2015-09-23T18:59:08.7773982-06:00" endTime="2015-09-23T18:59:08.8086482-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="734d2cfb-ff08-4639-9120-40b83898e2f7">
     </UnitTestResult>
-    <UnitTestResult executionId="ddc798be-ad92-4eac-8f63-cc7b874f1f21" testId="6428dd7c-2d56-1138-914b-3a2a8defd2ec" testName="ShippingCosts_GetOne_When_ZoneValidAndWeightOutOfRange" computerName="CARLSYOGA" duration="00:00:00.0006975" startTime="2015-09-23T11:08:56.4981094-06:00" endTime="2015-09-23T11:08:56.5066146-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ddc798be-ad92-4eac-8f63-cc7b874f1f21">
+    <UnitTestResult executionId="1a7f3c2b-aab9-4141-a763-c3e037ff19ee" testId="1b4c9ea6-171e-9839-904b-4eea7261c60a" testName="TestHomeController_ContactAction" computerName="CARLSYOGA" duration="00:00:00.0080557" startTime="2015-09-23T18:59:08.8242747-06:00" endTime="2015-09-23T18:59:08.8399033-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1a7f3c2b-aab9-4141-a763-c3e037ff19ee">
     </UnitTestResult>
-    <UnitTestResult executionId="57fda5fd-51f2-4dd8-8285-00d989534c76" testId="9af3d94f-8924-411e-8055-d08c4b01744f" testName="ShippingZones_GetAll_Should_Succeed" computerName="CARLSYOGA" duration="00:00:00.0058494" startTime="2015-09-23T11:08:56.5126201-06:00" endTime="2015-09-23T11:08:56.5226264-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="57fda5fd-51f2-4dd8-8285-00d989534c76">
+    <UnitTestResult executionId="85a9e9f4-5437-4e46-8637-7df62b9b4014" testId="8075f966-def9-6b9f-522c-ccabbd48a403" testName="TestHomeController_CostsTableAction" computerName="CARLSYOGA" duration="00:00:00.3497893" startTime="2015-09-23T18:59:08.8711486-06:00" endTime="2015-09-23T18:59:09.2305272-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="85a9e9f4-5437-4e46-8637-7df62b9b4014">
     </UnitTestResult>
-    <UnitTestResult executionId="f1312ad4-43e4-48f3-b9c2-f9cefb63ccce" testId="0de95335-fe93-81ba-0473-d2bf32a84f88" testName="ShippingZones_GetOne_When_NotFoundExpected" computerName="CARLSYOGA" duration="00:00:00.0020967" startTime="2015-09-23T11:08:56.5286307-06:00" endTime="2015-09-23T11:08:56.5356369-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1312ad4-43e4-48f3-b9c2-f9cefb63ccce">
+    <UnitTestResult executionId="3fb0e5d7-e3af-4f74-b93b-6cdaae340902" testId="932763cc-fb89-9cd9-7c36-5fe2d8164002" testName="TestHomeController_IndexAction" computerName="CARLSYOGA" duration="00:00:00.0017589" startTime="2015-09-23T18:59:09.2305272-06:00" endTime="2015-09-23T18:59:09.2461542-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fb0e5d7-e3af-4f74-b93b-6cdaae340902">
     </UnitTestResult>
-    <UnitTestResult executionId="3bf14a83-c6b4-4b0f-b1ff-6c7b0ef70313" testId="56475026-18d2-398f-2e8a-6773ade4d1e0" testName="ShippingZones_GetOne_When_OKExpected" computerName="CARLSYOGA" duration="00:00:00.0002895" startTime="2015-09-23T11:08:56.5421411-06:00" endTime="2015-09-23T11:08:56.5466435-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3bf14a83-c6b4-4b0f-b1ff-6c7b0ef70313">
+    <UnitTestResult executionId="2428866d-bb73-41f0-a97a-e94f9773846f" testId="264b285a-a2dd-897f-7d77-66b83b3ebfe2" testName="TestHomeController_InputEntryAction" computerName="CARLSYOGA" duration="00:00:00.0017379" startTime="2015-09-23T18:59:09.2617789-06:00" endTime="2015-09-23T18:59:09.2774050-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2428866d-bb73-41f0-a97a-e94f9773846f">
     </UnitTestResult>
-    <UnitTestResult executionId="36759760-0ec1-4027-82fd-db733a3d4679" testId="a8523ccf-feb4-e404-54fe-4e25b69eb4df" testName="ShippingCalculation_InvalidZip" computerName="CARLSYOGA" duration="00:00:00.0251336" startTime="2015-09-23T11:08:56.5531485-06:00" endTime="2015-09-23T11:08:56.5846705-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="36759760-0ec1-4027-82fd-db733a3d4679">
+    <UnitTestResult executionId="74aa9e8d-d455-49aa-8972-62f2cbee7519" testId="0959826b-7e99-4a3b-355b-dd073bd8a125" testName="TestHomeController_ZonesTableAction" computerName="CARLSYOGA" duration="00:00:00.0403038" startTime="2015-09-23T18:59:09.2930315-06:00" endTime="2015-09-23T18:59:09.3555307-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="74aa9e8d-d455-49aa-8972-62f2cbee7519">
     </UnitTestResult>
-    <UnitTestResult executionId="61a936a6-f983-46a8-a829-a138509647e3" testId="73160925-c28d-f621-181b-dff734785ae0" testName="ShippingCalculation_NoZoneForSpecifiedZip" computerName="CARLSYOGA" duration="00:00:03.3863148" startTime="2015-09-23T11:08:56.5891737-06:00" endTime="2015-09-23T11:08:59.9699244-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61a936a6-f983-46a8-a829-a138509647e3">
+    <UnitTestResult executionId="482ed59d-1b46-4d4c-a2ca-0b8c77a3c8b6" testId="ca8e9fbb-db5f-06db-df57-201a0377e37a" testName="ShippingCosts_GetAll_Should_Succeed" computerName="CARLSYOGA" duration="00:00:00.0202071" startTime="2015-09-23T18:59:09.3555307-06:00" endTime="2015-09-23T18:59:09.4024080-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="482ed59d-1b46-4d4c-a2ca-0b8c77a3c8b6">
     </UnitTestResult>
-    <UnitTestResult executionId="7e49f632-5209-4ba1-ab3e-7868fe564fbd" testId="62ed5f1b-cc09-fcdf-5b19-5a73ab232779" testName="ShippingCalculation_ShouldBeValid" computerName="CARLSYOGA" duration="00:00:00.7705013" startTime="2015-09-23T11:08:59.9855560-06:00" endTime="2015-09-23T11:09:00.7650638-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e49f632-5209-4ba1-ab3e-7868fe564fbd">
+    <UnitTestResult executionId="568880f3-bf2a-4bd9-8259-e57586ac224d" testId="f4bb79df-f5ba-32b3-f456-69cab9527c7b" testName="ShippingCosts_GetOne_When_WeightAtHighLimit" computerName="CARLSYOGA" duration="00:00:00.0078816" startTime="2015-09-23T18:59:09.4180315-06:00" endTime="2015-09-23T18:59:09.4336567-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="568880f3-bf2a-4bd9-8259-e57586ac224d">
     </UnitTestResult>
-    <UnitTestResult executionId="a817e6c3-ff07-4111-a3fa-cd866d19953c" testId="4cdbfd6e-f56e-ffd9-3487-45efe2813347" testName="ShippingCalculation_WeightOutOfRange" computerName="CARLSYOGA" duration="00:00:00.0657843" startTime="2015-09-23T11:09:00.7806864-06:00" endTime="2015-09-23T11:09:00.8431903-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a817e6c3-ff07-4111-a3fa-cd866d19953c">
+    <UnitTestResult executionId="80d69fd2-da21-4ed3-96d8-5f44c470e212" testId="917310b0-f576-6b8c-ee78-c57ec1eae9ef" testName="ShippingCosts_GetOne_When_WeightAtLowLimit" computerName="CARLSYOGA" duration="00:00:00.0011371" startTime="2015-09-23T18:59:09.4492832-06:00" endTime="2015-09-23T18:59:09.4720208-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80d69fd2-da21-4ed3-96d8-5f44c470e212">
     </UnitTestResult>
-    <UnitTestResult executionId="89fda7c4-2268-4c07-8bbe-487c2f3f190e" testId="80de7ed6-776e-5ac3-2ebd-4d63755894cc" testName="ShippingCalculation_ZoneValidButWeightMissing" computerName="CARLSYOGA" duration="00:00:00.1978864" startTime="2015-09-23T11:09:00.8588129-06:00" endTime="2015-09-23T11:09:01.0721120-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="89fda7c4-2268-4c07-8bbe-487c2f3f190e">
+    <UnitTestResult executionId="ffc0c1f5-41e5-4b70-b5ed-63509bc6d5e8" testId="da979bce-8406-2156-7bc6-493920f97727" testName="ShippingCosts_GetOne_When_WeightJustOverHighLimit" computerName="CARLSYOGA" duration="00:00:00.0050159" startTime="2015-09-23T18:59:09.4940360-06:00" endTime="2015-09-23T18:59:09.5120501-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffc0c1f5-41e5-4b70-b5ed-63509bc6d5e8">
     </UnitTestResult>
-    <UnitTestResult executionId="b9b4fc93-374e-41df-9201-0a342f68d758" testId="7ee352c5-dd28-fa1a-d8a7-798cbddbb451" testName="ShippingCosts_GetAll_Should_Succeed" computerName="CARLSYOGA" duration="00:00:00.0801407" startTime="2015-09-23T11:09:01.0877377-06:00" endTime="2015-09-23T11:09:01.1970722-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b9b4fc93-374e-41df-9201-0a342f68d758">
+    <UnitTestResult executionId="7477e39a-e413-4c19-8886-15afa9fdbee5" testId="42f2a3bb-dfa9-d433-9b9d-04608bfe5a97" testName="ShippingCosts_GetOne_When_WeightZero_ShouldBe_Null" computerName="CARLSYOGA" duration="00:00:00.0011093" startTime="2015-09-23T18:59:09.5350656-06:00" endTime="2015-09-23T18:59:09.5560797-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7477e39a-e413-4c19-8886-15afa9fdbee5">
     </UnitTestResult>
-    <UnitTestResult executionId="e27cbd3d-73c2-4165-b41b-0f93a99a550e" testId="d8009da1-95e6-936e-6cec-d91c0ea5b062" testName="ShippingCosts_GetOne_When_WeightAtHighLimit" computerName="CARLSYOGA" duration="00:00:00.0439504" startTime="2015-09-23T11:09:01.2126992-06:00" endTime="2015-09-23T11:09:01.2752000-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e27cbd3d-73c2-4165-b41b-0f93a99a550e">
+    <UnitTestResult executionId="f59ee0b7-e524-47e5-bae5-28e8ac640117" testId="73334cd6-d29d-410c-4186-01540839395b" testName="ShippingCosts_GetOne_When_ZoneInvalid" computerName="CARLSYOGA" duration="00:00:00.0010362" startTime="2015-09-23T18:59:09.5730926-06:00" endTime="2015-09-23T18:59:09.5881029-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f59ee0b7-e524-47e5-bae5-28e8ac640117">
     </UnitTestResult>
-    <UnitTestResult executionId="616e3b42-f678-4daf-881e-4e3a73fa8a81" testId="94f0d8ce-a35a-3027-d902-9aa839ea0524" testName="ShippingCosts_GetOne_When_WeightAtLowLimit" computerName="CARLSYOGA" duration="00:00:00.0403385" startTime="2015-09-23T11:09:01.2752000-06:00" endTime="2015-09-23T11:09:01.3377064-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="616e3b42-f678-4daf-881e-4e3a73fa8a81">
+    <UnitTestResult executionId="b9e8702e-57e8-4765-a4b8-c72a6c5dae53" testId="6428dd7c-2d56-1138-914b-3a2a8defd2ec" testName="ShippingCosts_GetOne_When_ZoneValidAndWeightOutOfRange" computerName="CARLSYOGA" duration="00:00:00.0010297" startTime="2015-09-23T18:59:09.6061157-06:00" endTime="2015-09-23T18:59:09.6221266-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b9e8702e-57e8-4765-a4b8-c72a6c5dae53">
     </UnitTestResult>
-    <UnitTestResult executionId="9e75ce84-7644-4fc8-8268-d4db088aa542" testId="77ad3aad-7ef5-74ce-87dc-abd8ae5fc31b" testName="ShippingCosts_GetOne_When_WeightJustOverHighLimit" computerName="CARLSYOGA" duration="00:00:00.0444106" startTime="2015-09-23T11:09:01.3533312-06:00" endTime="2015-09-23T11:09:01.4002009-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e75ce84-7644-4fc8-8268-d4db088aa542">
+    <UnitTestResult executionId="aee8b868-1464-447a-b0d1-0c1f9c31ca8d" testId="b964bef7-56af-a0be-3992-fced69a081bb" testName="ShippingCosts_ServiceUri" computerName="CARLSYOGA" duration="00:00:00.0019158" startTime="2015-09-23T18:59:09.6391387-06:00" endTime="2015-09-23T18:59:09.6531491-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aee8b868-1464-447a-b0d1-0c1f9c31ca8d">
     </UnitTestResult>
-    <UnitTestResult executionId="f7cd9249-be77-469f-9fb8-736ed550d94c" testId="60440f65-f466-a730-0abf-144bdd5b221c" testName="ShippingCosts_GetOne_When_WeightZero_ShouldBe_Null" computerName="CARLSYOGA" duration="00:00:00.0388122" startTime="2015-09-23T11:09:01.4158265-06:00" endTime="2015-09-23T11:09:01.4751961-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7cd9249-be77-469f-9fb8-736ed550d94c">
+    <UnitTestResult executionId="1def2dd2-cc1a-40cd-a917-86b4eb0b2df1" testId="9af3d94f-8924-411e-8055-d08c4b01744f" testName="ShippingZones_GetAll_Should_Succeed" computerName="CARLSYOGA" duration="00:00:00.0124024" startTime="2015-09-23T18:59:09.6652103-06:00" endTime="2015-09-23T18:59:09.6964645-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1def2dd2-cc1a-40cd-a917-86b4eb0b2df1">
     </UnitTestResult>
-    <UnitTestResult executionId="c64d27d8-174e-4b7e-bf1c-361f05c65c1e" testId="e0f26912-135a-de3e-0313-937f9921b2c1" testName="ShippingCosts_GetOne_When_ZoneInvalid" computerName="CARLSYOGA" duration="00:00:00.2702571" startTime="2015-09-23T11:09:01.4882058-06:00" endTime="2015-09-23T11:09:01.7698449-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c64d27d8-174e-4b7e-bf1c-361f05c65c1e">
+    <UnitTestResult executionId="d5e46c4c-2028-451d-8796-aa35aecb2b85" testId="0de95335-fe93-81ba-0473-d2bf32a84f88" testName="ShippingZones_GetOne_When_NotFoundExpected" computerName="CARLSYOGA" duration="00:00:00.0067364" startTime="2015-09-23T18:59:09.7120881-06:00" endTime="2015-09-23T18:59:09.7433372-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d5e46c4c-2028-451d-8796-aa35aecb2b85">
     </UnitTestResult>
-    <UnitTestResult executionId="79d85cb8-3599-4299-aebb-b08381c3a308" testId="e68f2623-0be8-5756-a19d-acbe2b74c52e" testName="ShippingCosts_GetOne_When_ZoneValidAndWeightOutOfRange" computerName="CARLSYOGA" duration="00:00:00.0374428" startTime="2015-09-23T11:09:01.7848569-06:00" endTime="2015-09-23T11:09:01.8328881-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79d85cb8-3599-4299-aebb-b08381c3a308">
+    <UnitTestResult executionId="c5723d4d-cbbb-4197-8fb8-63654c16b94e" testId="56475026-18d2-398f-2e8a-6773ade4d1e0" testName="ShippingZones_GetOne_When_OKExpected" computerName="CARLSYOGA" duration="00:00:00.0006162" startTime="2015-09-23T18:59:09.7589616-06:00" endTime="2015-09-23T18:59:09.7589616-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5723d4d-cbbb-4197-8fb8-63654c16b94e">
     </UnitTestResult>
-    <UnitTestResult executionId="676968c0-876a-4bc9-902e-8224504ff8cd" testId="841ab221-4904-79fc-f73c-c32b6f8561d5" testName="ShippingZones_GetAll_Should_Succeed" computerName="CARLSYOGA" duration="00:00:00.0454314" startTime="2015-09-23T11:09:01.8458999-06:00" endTime="2015-09-23T11:09:01.8925950-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="676968c0-876a-4bc9-902e-8224504ff8cd">
+    <UnitTestResult executionId="bdc309b2-f4dc-482d-8ff9-c94987c934b6" testId="a8523ccf-feb4-e404-54fe-4e25b69eb4df" testName="ShippingCalculation_InvalidZip" computerName="CARLSYOGA" duration="00:00:00.0083401" startTime="2015-09-23T18:59:09.8026944-06:00" endTime="2015-09-23T18:59:09.8267106-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bdc309b2-f4dc-482d-8ff9-c94987c934b6">
     </UnitTestResult>
-    <UnitTestResult executionId="6c537c55-54cc-4c88-960d-ccfac1e8d628" testId="f7ba845c-6169-a86a-08ec-6e3264e48e84" testName="ShippingZones_GetOne_When_NotFoundExpected" computerName="CARLSYOGA" duration="00:00:00.0421308" startTime="2015-09-23T11:09:01.9082224-06:00" endTime="2015-09-23T11:09:01.9707220-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c537c55-54cc-4c88-960d-ccfac1e8d628">
+    <UnitTestResult executionId="e6693709-7d4f-44dc-b8a8-031fe28c5869" testId="73160925-c28d-f621-181b-dff734785ae0" testName="ShippingCalculation_NoZoneForSpecifiedZip" computerName="CARLSYOGA" duration="00:00:00.0707109" startTime="2015-09-23T18:59:09.8347642-06:00" endTime="2015-09-23T18:59:09.9129159-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6693709-7d4f-44dc-b8a8-031fe28c5869">
     </UnitTestResult>
-    <UnitTestResult executionId="dda4a1fd-de57-4945-b4e8-2c4612d83115" testId="cc1ee37a-1fc9-fe6f-0187-d3a2e8e74a78" testName="ShippingZones_GetOne_When_OKExpected" computerName="CARLSYOGA" duration="00:00:00.0398086" startTime="2015-09-23T11:09:01.9863480-06:00" endTime="2015-09-23T11:09:02.0273434-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dda4a1fd-de57-4945-b4e8-2c4612d83115">
+    <UnitTestResult executionId="1731ae87-2a12-4c57-9bb2-b98ffd06be80" testId="62ed5f1b-cc09-fcdf-5b19-5a73ab232779" testName="ShippingCalculation_ShouldBeValid" computerName="CARLSYOGA" duration="00:00:00.1358380" startTime="2015-09-23T18:59:09.9285133-06:00" endTime="2015-09-23T18:59:10.0691685-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1731ae87-2a12-4c57-9bb2-b98ffd06be80">
+    </UnitTestResult>
+    <UnitTestResult executionId="7cb55442-6ebc-47e2-b3c9-5d1c2d309f48" testId="4cdbfd6e-f56e-ffd9-3487-45efe2813347" testName="ShippingCalculation_WeightOutOfRange" computerName="CARLSYOGA" duration="00:00:00.0697521" startTime="2015-09-23T18:59:10.0847667-06:00" endTime="2015-09-23T18:59:10.1629185-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7cb55442-6ebc-47e2-b3c9-5d1c2d309f48">
+    </UnitTestResult>
+    <UnitTestResult executionId="83fa5504-3fd1-4f1b-b76b-e5ae6f1b1b6b" testId="80de7ed6-776e-5ac3-2ebd-4d63755894cc" testName="ShippingCalculation_ZoneValidButWeightMissing" computerName="CARLSYOGA" duration="00:00:00.1975879" startTime="2015-09-23T18:59:10.1785163-06:00" endTime="2015-09-23T18:59:10.3816497-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83fa5504-3fd1-4f1b-b76b-e5ae6f1b1b6b">
+    </UnitTestResult>
+    <UnitTestResult executionId="6b8e7507-66f2-44aa-b9c6-78de665ced1b" testId="7ee352c5-dd28-fa1a-d8a7-798cbddbb451" testName="ShippingCosts_GetAll_Should_Succeed" computerName="CARLSYOGA" duration="00:00:00.3431512" startTime="2015-09-23T18:59:10.3972714-06:00" endTime="2015-09-23T18:59:10.7566539-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b8e7507-66f2-44aa-b9c6-78de665ced1b">
+    </UnitTestResult>
+    <UnitTestResult executionId="b5a50369-5e69-49a6-8854-b14727d40175" testId="d8009da1-95e6-936e-6cec-d91c0ea5b062" testName="ShippingCosts_GetOne_When_WeightAtHighLimit" computerName="CARLSYOGA" duration="00:00:00.0347901" startTime="2015-09-23T18:59:10.7722757-06:00" endTime="2015-09-23T18:59:10.8035249-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b5a50369-5e69-49a6-8854-b14727d40175">
+    </UnitTestResult>
+    <UnitTestResult executionId="274ff5b8-5f42-41da-bdd2-6d93edeb0d34" testId="94f0d8ce-a35a-3027-d902-9aa839ea0524" testName="ShippingCosts_GetOne_When_WeightAtLowLimit" computerName="CARLSYOGA" duration="00:00:00.0363480" startTime="2015-09-23T18:59:10.8191518-06:00" endTime="2015-09-23T18:59:10.8676713-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="274ff5b8-5f42-41da-bdd2-6d93edeb0d34">
+    </UnitTestResult>
+    <UnitTestResult executionId="03c4222e-a5c4-47a1-bb17-328259c2dba0" testId="77ad3aad-7ef5-74ce-87dc-abd8ae5fc31b" testName="ShippingCosts_GetOne_When_WeightJustOverHighLimit" computerName="CARLSYOGA" duration="00:00:00.0399608" startTime="2015-09-23T18:59:10.8832961-06:00" endTime="2015-09-23T18:59:10.9301722-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03c4222e-a5c4-47a1-bb17-328259c2dba0">
+    </UnitTestResult>
+    <UnitTestResult executionId="5bdac8be-9862-4ec0-9bc6-54861948eced" testId="60440f65-f466-a730-0abf-144bdd5b221c" testName="ShippingCosts_GetOne_When_WeightZero_ShouldBe_Null" computerName="CARLSYOGA" duration="00:00:00.0398039" startTime="2015-09-23T18:59:10.9457970-06:00" endTime="2015-09-23T18:59:10.9926773-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5bdac8be-9862-4ec0-9bc6-54861948eced">
+    </UnitTestResult>
+    <UnitTestResult executionId="8baa29d4-b5e2-48b6-91bf-989a2eee4613" testId="e0f26912-135a-de3e-0313-937f9921b2c1" testName="ShippingCosts_GetOne_When_ZoneInvalid" computerName="CARLSYOGA" duration="00:00:00.2173186" startTime="2015-09-23T18:59:11.0082987-06:00" endTime="2015-09-23T18:59:11.2427034-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8baa29d4-b5e2-48b6-91bf-989a2eee4613">
+    </UnitTestResult>
+    <UnitTestResult executionId="f454d40a-d29e-4bd1-92d4-7ceac19754a6" testId="e68f2623-0be8-5756-a19d-acbe2b74c52e" testName="ShippingCosts_GetOne_When_ZoneValidAndWeightOutOfRange" computerName="CARLSYOGA" duration="00:00:00.0367560" startTime="2015-09-23T18:59:11.2427034-06:00" endTime="2015-09-23T18:59:11.3052051-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f454d40a-d29e-4bd1-92d4-7ceac19754a6">
+    </UnitTestResult>
+    <UnitTestResult executionId="068dd407-9692-492b-9ac7-28f455b88f51" testId="e3e99a96-dab0-77c4-277a-5b1c39e2d8c1" testName="ShippingCosts_ServiceUri" computerName="CARLSYOGA" duration="00:00:00.0002356" startTime="2015-09-23T18:59:11.3052051-06:00" endTime="2015-09-23T18:59:11.3208021-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="068dd407-9692-492b-9ac7-28f455b88f51">
+    </UnitTestResult>
+    <UnitTestResult executionId="c8db0ff3-0b59-4a19-91c6-0f2b6bb6fc8b" testId="841ab221-4904-79fc-f73c-c32b6f8561d5" testName="ShippingZones_GetAll_Should_Succeed" computerName="CARLSYOGA" duration="00:00:00.0386274" startTime="2015-09-23T18:59:11.3364278-06:00" endTime="2015-09-23T18:59:11.3989278-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8db0ff3-0b59-4a19-91c6-0f2b6bb6fc8b">
+    </UnitTestResult>
+    <UnitTestResult executionId="101b7665-b9f1-4f0a-90e7-893b5c5f2184" testId="f7ba845c-6169-a86a-08ec-6e3264e48e84" testName="ShippingZones_GetOne_When_NotFoundExpected" computerName="CARLSYOGA" duration="00:00:00.0404847" startTime="2015-09-23T18:59:11.4145547-06:00" endTime="2015-09-23T18:59:11.4614282-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="101b7665-b9f1-4f0a-90e7-893b5c5f2184">
+    </UnitTestResult>
+    <UnitTestResult executionId="1ccc7840-b3aa-4551-b754-ad975fb7bba3" testId="cc1ee37a-1fc9-fe6f-0187-d3a2e8e74a78" testName="ShippingZones_GetOne_When_OKExpected" computerName="CARLSYOGA" duration="00:00:00.0357579" startTime="2015-09-23T18:59:11.4614282-06:00" endTime="2015-09-23T18:59:11.5083055-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ccc7840-b3aa-4551-b754-ad975fb7bba3">
     </UnitTestResult>
   </Results>
 </TestRun>
